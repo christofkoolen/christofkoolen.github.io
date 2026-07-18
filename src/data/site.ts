@@ -99,20 +99,21 @@ export const publications: Publication[] = [
     authors: 'Christof Koolen and Monica Schellemans',
     venue: '46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86-103',
     links: [
-      { label: 'PDF', href: 'public/publications/Koolen and Schellemans - 2025 - DSA.pdf' },
+      { label: 'PDF', href: '/public/publications/Koolen_and_Schellemans_2025_DSA.pdf' },
       { label: 'Publisher', href: 'https://www.inview.nl/document/id48f2351fa62e4f648138c688146a9af2/' }
     ],
+    oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86-103`
     bibtex: `@article{koolen2025dsa,
       author = {Koolen, Christof and Schellemans, Monica},
       title = {De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?},
       journal = {Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht},
+      publisher = {Wolters Kluwer}
       year = {2025},
       volume = {46},
       number = {2},
       pages = {86--103},
-      publisher = {Wolters Kluwer}
     }`,
-    oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) JComputerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86-103`
+    
   },
   {
     category: 'articles',
