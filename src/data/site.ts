@@ -101,11 +101,12 @@ export const publications: Publication[] = [
       }
     ],
     bibtex: `@incollection{koolen2025genesis,
-    title = {Genesis of the Artificial Intelligence Act},
-    author = {Koolen, Christof and Pehlivan, C. N. and Forgó, Nikolaus and Valcke, Peggy},
-    year = {2025},
-    publisher = {Wolters Kluwer}
-  }
+  title = {Genesis of the Artificial Intelligence Act},
+  author = {Koolen, Christof and Pehlivan, C. N. and Forgó, Nikolaus and Valcke, Peggy},
+  year = {2025},
+  publisher = {Wolters Kluwer}
+}`
+  },
   {
     year: '2024',
     type: 'Journal article',
