@@ -89,7 +89,7 @@ const formatAuthors = (authors: string) => authors
           <p>Selected books, articles, chapters, case notes, and working papers. Resource links appear where available.</p>
         </div>
         <div class="publication-list">
-          {publications.map((publication) => (
+          {publications.map((publication, index) => (
             <article class="publication">
               <div class="publication-meta">
                 <span>{publication.year}</span>
@@ -101,25 +101,37 @@ const formatAuthors = (authors: string) => authors
                 <p class="publication-source">{publication.venue || publication.type}</p>
                 {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
                   <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
-                    <div class="publication-links">
+                    <div class="publication-controls">
                       {publication.links.map((link) => (
                         <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
                       ))}
-                    </div>
-                    <div class="citation-panels">
                       {publication.bibtex && (
-                        <details class="citation-panel bibtex-panel">
-                          <summary>BibTeX</summary>
-                          <pre><code>{publication.bibtex}</code></pre>
-                        </details>
+                        <button
+                          type="button"
+                          class="citation-toggle"
+                          data-panel={`bibtex-${index}`}
+                          aria-expanded="false"
+                          aria-controls={`bibtex-${index}`}
+                        >BibTeX</button>
                       )}
                       {publication.oscola && (
-                        <details class="citation-panel oscola-panel">
-                          <summary>OSCOLA</summary>
-                          <div class="oscola-citation" set:html={publication.oscola} />
-                        </details>
+                        <button
+                          type="button"
+                          class="citation-toggle"
+                          data-panel={`oscola-${index}`}
+                          aria-expanded="false"
+                          aria-controls={`oscola-${index}`}
+                        >OSCOLA</button>
                       )}
                     </div>
+                    {publication.bibtex && (
+                      <div class="citation-content" id={`bibtex-${index}`} hidden>
+                        <pre><code>{publication.bibtex}</code></pre>
+                      </div>
+                    )}
+                    {publication.oscola && (
+                      <div class="citation-content oscola-citation" id={`oscola-${index}`} hidden set:html={publication.oscola} />
+                    )}
                   </div>
                 )}
               </div>
@@ -177,11 +189,35 @@ const formatAuthors = (authors: string) => authors
     </footer>
 
     <script>
-      const button = document.querySelector('.theme-toggle');
-      button?.addEventListener('click', () => {
+      const themeButton = document.querySelector('.theme-toggle');
+      themeButton?.addEventListener('click', () => {
         const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
         document.documentElement.dataset.theme = next;
         localStorage.setItem('theme', next);
+      });
+
+      document.querySelectorAll('.citation-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          const panelId = toggle.getAttribute('data-panel');
+          if (!panelId) return;
+
+          const publication = toggle.closest('.publication-resources');
+          const panel = document.getElementById(panelId);
+          if (!publication || !panel) return;
+
+          const shouldOpen = panel.hasAttribute('hidden');
+          publication.querySelectorAll('.citation-content').forEach((content) => {
+            content.setAttribute('hidden', '');
+          });
+          publication.querySelectorAll('.citation-toggle').forEach((button) => {
+            button.setAttribute('aria-expanded', 'false');
+          });
+
+          if (shouldOpen) {
+            panel.removeAttribute('hidden');
+            toggle.setAttribute('aria-expanded', 'true');
+          }
+        });
       });
     </script>
   </body>
