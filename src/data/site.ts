@@ -18,10 +18,10 @@ export const profile = {
   email: 'christof.koolen@kuleuven.be',
   bio: 'I study how artificial intelligence can improve access to legal information while remaining transparent, reliable, and accountable. My work brings together legal information retrieval, computational legal research, and the responsible evaluation of AI systems in legal settings.',
   links: [
-    { label: 'Google Scholar', href: '#' },
-    { label: 'ORCID', href: '#' },
+    { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=yPojlMIAAAAJ' },
+    { label: 'ORCID', href: 'https://orcid.org/0000-0002-2210-6821' },
     { label: 'GitHub', href: 'https://github.com/christofkoolen' },
-    { label: 'LinkedIn', href: '#' }
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/christofkoolen/' }
   ] satisfies SiteLink[]
 };
 
