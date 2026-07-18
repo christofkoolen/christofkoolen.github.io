@@ -50,7 +50,9 @@ const formatAuthors = (authors: string) => authors
             <a class="button secondary" href={`mailto:${profile.email}`}>Contact</a>
           </div>
           <ul class="profile-links" aria-label="Academic profiles">
-            {profile.links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+            {profile.links.map((link) => (
+              <li><a href={link.href} target="_blank" rel="noreferrer">{link.label}</a></li>
+            ))}
           </ul>
         </div>
 
@@ -100,11 +102,19 @@ const formatAuthors = (authors: string) => authors
                 <h3>{publication.title}</h3>
                 <p class="authors">{formatAuthors(publication.authors)}</p>
                 <p class="publication-source">{publication.venue || publication.type}</p>
-                {publication.links.length > 0 && (
-                  <div class="publication-links" aria-label={`Resources for ${publication.title}`}>
-                    {publication.links.map((link) => (
-                      <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                    ))}
+                {(publication.links.length > 0 || publication.bibtex) && (
+                  <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
+                    <div class="publication-links">
+                      {publication.links.map((link) => (
+                        <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                      ))}
+                    </div>
+                    {publication.bibtex && (
+                      <details class="bibtex-panel">
+                        <summary>BibTeX</summary>
+                        <pre><code>{publication.bibtex}</code></pre>
+                      </details>
+                    )}
                   </div>
                 )}
               </div>
@@ -145,7 +155,9 @@ const formatAuthors = (authors: string) => authors
                 <h3>{talk.title}</h3>
                 <p class="item-subtitle">{talk.event} · {talk.location}</p>
                 <div class="item-links">
-                  {talk.links.map((link) => <a href={link.href}>{link.label} ↗</a>)}
+                  {talk.links.map((link) => (
+                    <a href={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>
+                  ))}
                 </div>
               </div>
             </article>
