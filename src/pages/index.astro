@@ -5,6 +5,24 @@ import { profile, publications, research, talks, teaching } from '../data/site';
 const sections = ['research', 'publications', 'teaching', 'talks'];
 const formatAuthors = (authors: string) => authors
   .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
+
+const publicationGroups = [
+  {
+    key: 'books',
+    title: 'Books and long-form works',
+    description: 'Monographs, dissertations, and other substantial works.'
+  },
+  {
+    key: 'articles',
+    title: 'Articles and book chapters',
+    description: 'Journal articles, chapters, working papers, and case notes.'
+  },
+  {
+    key: 'outreach',
+    title: 'Blogs and outreach',
+    description: 'Professional commentary, public-facing writing, and short contributions.'
+  }
+] as const;
 ---
 
 <!doctype html>
@@ -86,59 +104,78 @@ const formatAuthors = (authors: string) => authors
             <p class="eyebrow">02</p>
             <h2>Publications</h2>
           </div>
-          <p>Selected books, articles, chapters, case notes, and working papers. Resource links appear where available.</p>
+          <p>Books, articles, chapters, case notes, working papers, and public-facing contributions. Resource links appear where available.</p>
         </div>
-        <div class="publication-list">
-          {publications.map((publication, index) => (
-            <article class="publication">
-              <div class="publication-meta">
-                <span>{publication.year}</span>
-                <span>{publication.type}</span>
-              </div>
-              <div class="publication-content">
-                <h3>{publication.title}</h3>
-                <p class="authors">{formatAuthors(publication.authors)}</p>
-                <p class="publication-source">{publication.venue || publication.type}</p>
-                {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
-                  <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
-                    <div class="publication-controls">
-                      {publication.links.map((link) => (
-                        <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                      ))}
-                      {publication.bibtex && (
-                        <button
-                          type="button"
-                          class="citation-toggle"
-                          data-panel={`bibtex-${index}`}
-                          aria-expanded="false"
-                          aria-controls={`bibtex-${index}`}
-                        >BibTeX</button>
-                      )}
-                      {publication.oscola && (
-                        <button
-                          type="button"
-                          class="citation-toggle"
-                          data-panel={`oscola-${index}`}
-                          aria-expanded="false"
-                          aria-controls={`oscola-${index}`}
-                        >OSCOLA</button>
-                      )}
-                    </div>
-                    {publication.bibtex && (
-                      <div class="citation-content" id={`bibtex-${index}`} hidden>
-                        <pre class="citation-body citation-code"><code>{publication.bibtex}</code></pre>
-                      </div>
-                    )}
-                    {publication.oscola && (
-                      <div class="citation-content" id={`oscola-${index}`} hidden>
-                        <div class="citation-body citation-prose" set:html={publication.oscola} />
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </article>
-          ))}
+
+        <div class="publication-groups">
+          {publicationGroups.map((group) => {
+            const groupPublications = publications.filter((publication) => publication.category === group.key);
+            if (groupPublications.length === 0) return null;
+
+            return (
+              <section class="publication-group" aria-labelledby={`publication-group-${group.key}`}>
+                <div class="publication-group-heading">
+                  <h3 id={`publication-group-${group.key}`}>{group.title}</h3>
+                  <p>{group.description}</p>
+                </div>
+                <div class="publication-list">
+                  {groupPublications.map((publication, index) => {
+                    const publicationId = `${group.key}-${index}`;
+                    return (
+                      <article class="publication">
+                        <div class="publication-meta">
+                          <span>{publication.year}</span>
+                          <span>{publication.type}</span>
+                        </div>
+                        <div class="publication-content">
+                          <h3>{publication.title}</h3>
+                          <p class="authors">{formatAuthors(publication.authors)}</p>
+                          <p class="publication-source">{publication.venue || publication.type}</p>
+                          {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
+                            <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
+                              <div class="publication-controls">
+                                {publication.links.map((link) => (
+                                  <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                                ))}
+                                {publication.bibtex && (
+                                  <button
+                                    type="button"
+                                    class="citation-toggle"
+                                    data-panel={`bibtex-${publicationId}`}
+                                    aria-expanded="false"
+                                    aria-controls={`bibtex-${publicationId}`}
+                                  >BibTeX</button>
+                                )}
+                                {publication.oscola && (
+                                  <button
+                                    type="button"
+                                    class="citation-toggle"
+                                    data-panel={`oscola-${publicationId}`}
+                                    aria-expanded="false"
+                                    aria-controls={`oscola-${publicationId}`}
+                                  >OSCOLA</button>
+                                )}
+                              </div>
+                              {publication.bibtex && (
+                                <div class="citation-content" id={`bibtex-${publicationId}`} hidden>
+                                  <pre class="citation-body citation-code"><code>{publication.bibtex}</code></pre>
+                                </div>
+                              )}
+                              {publication.oscola && (
+                                <div class="citation-content" id={`oscola-${publicationId}`} hidden>
+                                  <div class="citation-body citation-prose" set:html={publication.oscola} />
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </section>
 
