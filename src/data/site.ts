@@ -19,6 +19,7 @@ export type Publication = {
   venue: string;
   links: SiteLink[];
   bibtex?: string;
+  oscola?: string;
 };
 
 export const profile = {
