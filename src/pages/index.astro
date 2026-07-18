@@ -10,17 +10,17 @@ const publicationGroups = [
   {
     key: 'books',
     title: 'Books and long-form works',
-    description: 'Monographs, dissertations, and other substantial works.'
+    description: ''
   },
   {
     key: 'articles',
     title: 'Articles and book chapters',
-    description: 'Journal articles, chapters, working papers, and case notes.'
+    description: ''
   },
   {
     key: 'outreach',
     title: 'Blogs and outreach',
-    description: 'Professional commentary, public-facing writing, and short contributions.'
+    description: ''
   }
 ] as const;
 ---
@@ -104,7 +104,6 @@ const publicationGroups = [
             <p class="eyebrow">02</p>
             <h2>Publications</h2>
           </div>
-          <p>Books, articles, chapters, case notes, working papers, and public-facing contributions. Resource links appear where available.</p>
         </div>
 
         <div class="publication-groups">
@@ -224,7 +223,7 @@ const publicationGroups = [
 
     <footer>
       <p>© {new Date().getFullYear()} {profile.name}</p>
-      <p>Built for clarity, accessibility, and long-term maintainability.</p>
+      <p></p>
     </footer>
 
     <script>
