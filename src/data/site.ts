@@ -1,3 +1,16 @@
+export type SiteLink = {
+  label: string;
+  href: string;
+};
+
+export type Talk = {
+  date: string;
+  title: string;
+  event: string;
+  location: string;
+  links: SiteLink[];
+};
+
 export const profile = {
   name: 'Christof Koolen',
   title: 'Researcher in Law and Artificial Intelligence',
@@ -9,7 +22,7 @@ export const profile = {
     { label: 'ORCID', href: '#' },
     { label: 'GitHub', href: 'https://github.com/christofkoolen' },
     { label: 'LinkedIn', href: '#' }
-  ]
+  ] satisfies SiteLink[]
 };
 
 export const research = [
@@ -56,7 +69,7 @@ export const teaching = [
   }
 ];
 
-export const talks = [
+export const talks: Talk[] = [
   {
     date: 'Add date',
     title: 'Add talk title',
