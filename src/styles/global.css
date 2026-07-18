@@ -60,10 +60,6 @@ h3 { font-size: 1.15rem; line-height: 1.35; }
 .profile-links a, .item-links a { color: var(--accent); font-weight: 650; }
 .portrait-column { display: grid; gap: 1.25rem; align-self: start; }
 .portrait-image { width: 100%; aspect-ratio: 4 / 5; display: block; object-fit: cover; object-position: center top; border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); background: var(--surface); }
-.focus-card { padding: 1.6rem; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
-.focus-card p { color: var(--accent); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; }
-.focus-card strong { display: block; font-family: Georgia, serif; font-size: 1.55rem; line-height: 1.15; margin-bottom: 1rem; }
-.focus-card span { color: var(--muted); }
 
 .section { padding: 5.5rem 0; border-top: 1px solid var(--line); scroll-margin-top: 5rem; }
 .section-heading { max-width: 720px; margin-bottom: 2.75rem; }
@@ -74,10 +70,15 @@ h3 { font-size: 1.15rem; line-height: 1.35; }
 .research-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .research-card h3 { font-family: Georgia, serif; font-size: 1.65rem; font-weight: 500; }
 .research-card p { color: var(--muted); }
-.publication { display: grid; grid-template-columns: 150px 1fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); }
-.publication:last-child { border-bottom: 1px solid var(--line); }
-.publication-meta { display: flex; flex-direction: column; color: var(--muted); font-size: .9rem; }
-.publication h3 { font-family: Georgia, serif; font-weight: 500; font-size: 1.55rem; margin-bottom: .5rem; }
+.publication-list { border-top: 1px solid var(--line); }
+.publication { padding: 2rem 0 2.2rem; border-bottom: 1px solid var(--line); }
+.publication h3 { max-width: 900px; margin-bottom: .6rem; font-family: Georgia, serif; font-weight: 500; font-size: clamp(1.35rem, 2vw, 1.7rem); }
+.publication .authors { margin-bottom: .2rem; font-size: .95rem; }
+.publication-source { margin-bottom: 0; color: var(--muted); }
+.publication-source span { padding-inline: .3rem; }
+.publication-links { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1rem; }
+.publication-links a { display: inline-flex; align-items: center; padding: .35rem .62rem; border: 1px solid var(--line); border-radius: .3rem; color: var(--accent); font-size: .82rem; font-weight: 700; line-height: 1.2; text-decoration: none; }
+.publication-links a:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
 .timeline { border-top: 1px solid var(--line); }
 .timeline-item { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
 .timeline-date { color: var(--accent); font-weight: 750; }
@@ -99,8 +100,7 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2.5r
   .wordmark strong { display: none; }
   h1 { font-size: clamp(2.5rem, 12vw, 3.8rem); }
   .section { padding: 4.5rem 0; }
-  .publication, .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
-  .publication-meta { flex-direction: row; gap: .75rem; }
+  .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
   footer { flex-direction: column; }
 }
 
