@@ -92,18 +92,22 @@ const formatAuthors = (authors: string) => authors
         <div class="publication-list">
           {publications.map((publication) => (
             <article class="publication">
-              <h3>{publication.title}</h3>
-              <p class="authors">{formatAuthors(publication.authors)}</p>
-              <p class="publication-source">
-                {publication.venue || publication.type} <span aria-hidden="true">•</span> {publication.year}
-              </p>
-              {publication.links.length > 0 && (
-                <div class="publication-links" aria-label={`Resources for ${publication.title}`}>
-                  {publication.links.map((link) => (
-                    <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                  ))}
-                </div>
-              )}
+              <div class="publication-meta">
+                <span>{publication.year}</span>
+                <span>{publication.type}</span>
+              </div>
+              <div class="publication-content">
+                <h3>{publication.title}</h3>
+                <p class="authors">{formatAuthors(publication.authors)}</p>
+                <p class="publication-source">{publication.venue || publication.type}</p>
+                {publication.links.length > 0 && (
+                  <div class="publication-links" aria-label={`Resources for ${publication.title}`}>
+                    {publication.links.map((link) => (
+                      <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </article>
           ))}
         </div>
