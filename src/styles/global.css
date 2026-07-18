@@ -78,18 +78,21 @@ h3 { font-size: 1.15rem; line-height: 1.35; }
 .publication .authors { margin-bottom: .2rem; font-size: .95rem; }
 .publication-source { margin-bottom: 0; color: var(--muted); }
 .publication-resources { margin-top: 1rem; }
-.publication-links { display: flex; flex-wrap: wrap; gap: .55rem; }
+.publication-links,
+.citation-panels { display: flex; flex-wrap: wrap; gap: .55rem; }
+.citation-panels { margin-top: .55rem; align-items: flex-start; }
 .publication-links a,
-.bibtex-panel summary { display: inline-flex; align-items: center; padding: .35rem .62rem; border: 1px solid var(--line); border-radius: .3rem; color: var(--accent); background: transparent; font: inherit; font-size: .82rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; }
+.citation-panel summary { display: inline-flex; align-items: center; padding: .35rem .62rem; border: 1px solid var(--line); border-radius: .3rem; color: var(--accent); background: transparent; font: inherit; font-size: .82rem; font-weight: 700; line-height: 1.2; text-decoration: none; cursor: pointer; }
 .publication-links a:hover,
-.bibtex-panel summary:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
-.bibtex-panel { margin-top: .55rem; }
-.bibtex-panel summary { width: fit-content; list-style: none; }
-.bibtex-panel summary::-webkit-details-marker { display: none; }
-.bibtex-panel summary::after { content: ' +'; }
-.bibtex-panel[open] summary::after { content: ' −'; }
-.bibtex-panel pre { max-width: 100%; margin: .75rem 0 0; padding: 1rem; overflow-x: auto; border: 1px solid var(--line); border-radius: .45rem; background: var(--surface); white-space: pre; }
-.bibtex-panel code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .84rem; line-height: 1.55; }
+.citation-panel summary:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+.citation-panel { max-width: 100%; }
+.citation-panel summary { width: fit-content; list-style: none; }
+.citation-panel summary::-webkit-details-marker { display: none; }
+.citation-panel pre,
+.oscola-citation { max-width: 100%; margin: .75rem 0 0; padding: 1rem; overflow-x: auto; border: 1px solid var(--line); border-radius: .45rem; background: var(--surface); }
+.citation-panel pre { white-space: pre; }
+.citation-panel code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .84rem; line-height: 1.55; }
+.oscola-citation { max-width: 780px; line-height: 1.65; }
 .timeline { border-top: 1px solid var(--line); }
 .timeline-item { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
 .timeline-date { color: var(--accent); font-weight: 750; }
