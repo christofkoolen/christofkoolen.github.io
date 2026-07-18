@@ -106,7 +106,6 @@ export const publications: Publication[] = [
     year = {2025},
     publisher = {Wolters Kluwer}
   }
-}
   {
     year: '2024',
     type: 'Journal article',
