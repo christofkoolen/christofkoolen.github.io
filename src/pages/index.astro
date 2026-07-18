@@ -4,10 +4,7 @@ import { profile, publications, research, talks, teaching } from '../data/site';
 
 const sections = ['research', 'publications', 'teaching', 'talks'];
 const formatAuthors = (authors: string) => authors
-  .split(/,\s+(?:and\s+)?|\s+and\s+/)
-  .map((author) => author.trim().split(/\s+/).at(-1))
-  .filter(Boolean)
-  .join(' · ');
+  .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
 ---
 
 <!doctype html>
@@ -102,19 +99,27 @@ const formatAuthors = (authors: string) => authors
                 <h3>{publication.title}</h3>
                 <p class="authors">{formatAuthors(publication.authors)}</p>
                 <p class="publication-source">{publication.venue || publication.type}</p>
-                {(publication.links.length > 0 || publication.bibtex) && (
+                {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
                   <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
                     <div class="publication-links">
                       {publication.links.map((link) => (
                         <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
                       ))}
                     </div>
-                    {publication.bibtex && (
-                      <details class="bibtex-panel">
-                        <summary>BibTeX</summary>
-                        <pre><code>{publication.bibtex}</code></pre>
-                      </details>
-                    )}
+                    <div class="citation-panels">
+                      {publication.bibtex && (
+                        <details class="citation-panel bibtex-panel">
+                          <summary>BibTeX</summary>
+                          <pre><code>{publication.bibtex}</code></pre>
+                        </details>
+                      )}
+                      {publication.oscola && (
+                        <details class="citation-panel oscola-panel">
+                          <summary>OSCOLA</summary>
+                          <div class="oscola-citation" set:html={publication.oscola} />
+                        </details>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
