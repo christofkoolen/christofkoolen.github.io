@@ -13,9 +13,9 @@ export type Talk = {
 
 export const profile = {
   name: 'Christof Koolen',
-  title: 'Researcher in Law and Artificial Intelligence',
-  affiliation: 'Add current institution and department',
-  email: 'your.email@example.com',
+  title: 'Visiting Professor and FWO Postdoctoral Researcher in Law and Artificial Intelligence',
+  affiliation: 'The Centre for IT & IP Law, KU Leuven (Belgium)',
+  email: 'christof.koolen@kuleuven.be',
   bio: 'I study how artificial intelligence can improve access to legal information while remaining transparent, reliable, and accountable. My work brings together legal information retrieval, computational legal research, and the responsible evaluation of AI systems in legal settings.',
   links: [
     { label: 'Google Scholar', href: '#' },
