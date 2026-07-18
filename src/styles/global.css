@@ -114,6 +114,8 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2.5r
   .section { padding: 4.5rem 0; }
   .publication, .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
   .publication-meta { flex-direction: row; gap: .75rem; }
+  .citation-content pre { padding: .85rem; overflow-x: visible; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+  .citation-content code { font-size: .76rem; line-height: 1.5; }
   footer { flex-direction: column; }
 }
 
