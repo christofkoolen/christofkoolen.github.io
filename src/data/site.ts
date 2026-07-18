@@ -56,7 +56,24 @@ export const publications: Publication[] = [
     title: 'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
     authors: 'Christof Koolen',
     venue: 'Oxford University Press',
-    links: []
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/genesis-ai-act.pdf'
+      },
+      {
+        label: 'DOI',
+        href: 'https://doi.org/10.xxxx/xxxxx'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://publisher.example.com/article-page'
+      },
+      {
+        label: 'BibTeX',
+        href: '/bibtex/genesis-ai-act.bib'
+      }
+    ]
   },
   {
     year: '2025',
