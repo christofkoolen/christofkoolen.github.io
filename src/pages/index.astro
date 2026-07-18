@@ -3,6 +3,11 @@ import '../styles/global.css';
 import { profile, publications, research, talks, teaching } from '../data/site';
 
 const sections = ['research', 'publications', 'teaching', 'talks'];
+const formatAuthors = (authors: string) => authors
+  .split(/,\s+(?:and\s+)?|\s+and\s+/)
+  .map((author) => author.trim().split(/\s+/).at(-1))
+  .filter(Boolean)
+  .join(' · ');
 ---
 
 <!doctype html>
@@ -82,23 +87,23 @@ const sections = ['research', 'publications', 'teaching', 'talks'];
             <p class="eyebrow">02</p>
             <h2>Publications</h2>
           </div>
-          <p>Articles, conference papers, working papers, datasets, and software. Replace the sample records in <code>src/data/site.ts</code>.</p>
+          <p>Selected books, articles, chapters, case notes, and working papers. Resource links appear where available.</p>
         </div>
         <div class="publication-list">
           {publications.map((publication) => (
             <article class="publication">
-              <div class="publication-meta">
-                <span>{publication.year}</span>
-                <span>{publication.type}</span>
-              </div>
-              <div>
-                <h3>{publication.title}</h3>
-                <p class="authors">{publication.authors}</p>
-                <p>{publication.venue}</p>
-                <div class="item-links">
-                  {publication.links.map((link) => <a href={link.href}>{link.label} ↗</a>)}
+              <h3>{publication.title}</h3>
+              <p class="authors">{formatAuthors(publication.authors)}</p>
+              <p class="publication-source">
+                {publication.venue || publication.type} <span aria-hidden="true">•</span> {publication.year}
+              </p>
+              {publication.links.length > 0 && (
+                <div class="publication-links" aria-label={`Resources for ${publication.title}`}>
+                  {publication.links.map((link) => (
+                    <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                  ))}
                 </div>
-              </div>
+              )}
             </article>
           ))}
         </div>
