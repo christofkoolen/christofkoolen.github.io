@@ -84,14 +84,29 @@ export const publications: Publication[] = [
     venue: 'Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht, 46(2)',
     links: []
   },
-  {
-    year: '2025',
-    type: 'Book chapter',
-    title: 'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
-    authors: 'Christof Koolen, C. N. Pehlivan, N. Forgó, and P. Valcke',
-    venue: 'Wolters Kluwer',
-    links: []
-  },
+{
+  year: '2025',
+  type: 'Book chapter',
+  title: 'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
+  authors: 'Christof Koolen, C. N. Pehlivan, N. Forgó, and P. Valcke',
+  venue: 'Wolters Kluwer',
+  links: [
+    {
+      label: 'PDF',
+      href: '/publications/genesis-ai-act.pdf'
+    },
+    {
+      label: 'Publisher',
+      href: 'https://example.com'
+    }
+  ],
+  bibtex: `@incollection{koolen2025genesis,
+  title = {Genesis of the Artificial Intelligence Act},
+  author = {Koolen, Christof and Pehlivan, C. N. and Forgó, Nikolaus and Valcke, Peggy},
+  year = {2025},
+  publisher = {Wolters Kluwer}
+}`
+}
   {
     year: '2024',
     type: 'Journal article',
