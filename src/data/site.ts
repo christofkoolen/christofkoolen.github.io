@@ -11,7 +11,10 @@ export type Talk = {
   links: SiteLink[];
 };
 
+export type PublicationCategory = 'books' | 'articles' | 'outreach';
+
 export type Publication = {
+  category: PublicationCategory;
   year: string;
   type: string;
   title: string;
@@ -53,12 +56,14 @@ export const research = [
 
 /*
 For every publication:
+- Set category to books, articles, or outreach.
 - Add link objects inside links for PDF, DOI, Publisher, Dataset, or Code.
 - Paste BibTeX between the backticks in bibtex.
 - Paste an OSCOLA citation in oscola. Use <em>...</em> for italics.
 Empty fields are intentionally not shown on the website.
 */
 export const publicationResourceTemplate = {
+  category: 'articles',
   links: [
     { label: 'PDF', href: '/publications/your-file-name.pdf' },
     { label: 'DOI', href: 'https://doi.org/10.xxxx/your-doi' },
@@ -72,10 +77,11 @@ export const publicationResourceTemplate = {
   doi = {10.xxxx/your-doi}
 }`,
   oscola: `Christof Koolen and Coauthor Example, ‘Replace with the Article Title’ (2025) 1 <em>Journal Title</em> 1`
-} satisfies Pick<Publication, 'links' | 'bibtex' | 'oscola'>;
+} satisfies Pick<Publication, 'category' | 'links' | 'bibtex' | 'oscola'>;
 
 export const publications: Publication[] = [
   {
+    category: 'books',
     year: '2025',
     type: 'Book',
     title: 'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
@@ -86,6 +92,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2025',
     type: 'Journal article',
     title: 'De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?',
@@ -96,6 +103,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2025',
     type: 'Book chapter',
     title: 'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
@@ -111,6 +119,7 @@ export const publications: Publication[] = [
     oscola: `Christof Koolen, C N Pehlivan, Nikolaus Forgó and Peggy Valcke, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in <em>Artificial Intelligence and the Law</em> (Wolters Kluwer 2025)`
   },
   {
+    category: 'articles',
     year: '2024',
     type: 'Journal article',
     title: 'Generative AI, education, and copyright law: An empirical study of policymaking in UK universities',
@@ -121,6 +130,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2024',
     type: 'Journal article',
     title: 'From insight to compliance: Appropriate technical and organisational security measures through the lens of cybersecurity maturity models',
@@ -131,6 +141,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'books',
     year: '2023',
     type: 'Doctoral dissertation',
     title: 'Innovation and Consumer Protection in Internet of Things Ecosystems: Protecting End Users at the Crossroads between Consumer, Competition, and Data',
@@ -141,6 +152,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2023',
     type: 'Journal article',
     title: 'Consumer protection in the age of artificial intelligence: Breaking down the silo mentality between consumer, competition, and data',
@@ -151,6 +163,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2023',
     type: 'Book chapter',
     title: 'AI and Antitrust: Between Collision and Collusion',
@@ -161,6 +174,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2022',
     type: 'Working paper',
     title: "'Apes Gone', but what about Consumer Protection? Applying EU Consumer Law to the Transfer of NFTs",
@@ -171,6 +185,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2022',
     type: 'Case note',
     title: 'The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google',
@@ -181,8 +196,9 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'outreach',
     year: '2021',
-    type: 'Publication',
+    type: 'Professional commentary',
     title: 'Cybersecurity voor het Internet of Things: Hoe beoordeel je de juridische gevolgen van slimme apparaten met beveiligingsproblemen?',
     authors: 'Christof Koolen',
     venue: '',
@@ -191,6 +207,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2021',
     type: 'Journal article',
     title: 'The traceability of construction and demolition waste in Flanders via blockchain technology: A match made in heaven?',
@@ -201,6 +218,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2021',
     type: 'Journal article',
     title: 'Des appareils intelligents au centre de plusieurs problèmes de concurrence: Le rapport de l’enquête sectorielle de la Commission européenne sur l’Internet des Objets destiné aux consommateurs',
@@ -211,6 +229,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2021',
     type: 'Case note',
     title: 'Connected cars and FRAND licensing traffic jams: The CJEU referral in C-182/21 Nokia v Daimler',
@@ -221,6 +240,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2021',
     type: 'Journal article',
     title: 'Transparency and Consent in Data-Driven Smart Environments',
@@ -231,6 +251,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2020',
     type: 'Book chapter',
     title: 'Blockchaintechnologie, smart contracts en consumentenbescherming',
@@ -241,6 +262,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2019',
     type: 'Journal article',
     title: 'Vacuum Cleaner Energy Labels and Misleading Commercial Practices: EU Consumers Left in the Dust?',
@@ -251,6 +273,7 @@ export const publications: Publication[] = [
     oscola: ''
   },
   {
+    category: 'articles',
     year: '2016',
     type: 'Journal article',
     title: 'The use of hyperlinks in an online environment: putting links in chains?',
