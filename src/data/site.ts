@@ -96,11 +96,23 @@ export const publications: Publication[] = [
     year: '2025',
     type: 'Journal article',
     title: 'De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?',
-    authors: 'Christof Koolen and M. Schellemans',
-    venue: 'Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht, 46(2)',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    authors: 'Christof Koolen and Monica Schellemans',
+    venue: '46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86-103',
+    links: [
+      { label: 'PDF', href: 'public/publications/Koolen and Schellemans - 2025 - DSA.pdf' },
+      { label: 'Publisher', href: 'https://www.inview.nl/document/id48f2351fa62e4f648138c688146a9af2/' }
+    ],
+    bibtex: `@article{koolen2025dsa,
+      author = {Koolen, Christof and Schellemans, Monica},
+      title = {De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?},
+      journal = {Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht},
+      year = {2025},
+      volume = {46},
+      number = {2},
+      pages = {86--103},
+      publisher = {Wolters Kluwer}
+    }`,
+    oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) JComputerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86-103`
   },
   {
     category: 'articles',
@@ -136,17 +148,6 @@ export const publications: Publication[] = [
     title: 'From insight to compliance: Appropriate technical and organisational security measures through the lens of cybersecurity maturity models',
     authors: 'Christof Koolen, K. Wuyts, W. Joosen, and P. Valcke',
     venue: 'Computer Law & Security Review, 52, 105914',
-    links: [],
-    bibtex: '',
-    oscola: ''
-  },
-  {
-    category: 'books',
-    year: '2023',
-    type: 'Doctoral dissertation',
-    title: 'Innovation and Consumer Protection in Internet of Things Ecosystems: Protecting End Users at the Crossroads between Consumer, Competition, and Data',
-    authors: 'Christof Koolen, E. Terryn, and P. Valcke',
-    venue: 'KU Leuven',
     links: [],
     bibtex: '',
     oscola: ''
