@@ -50,10 +50,15 @@ const sections = ['research', 'publications', 'teaching', 'talks'];
         </div>
 
         <div class="portrait-column">
-          <div class="portrait-placeholder" role="img" aria-label="Portrait placeholder">
-            <span>Portrait</span>
-            <small>Replace with profile image</small>
-          </div>
+          <img
+            class="portrait-image"
+            src="/profile_image.jpg"
+            alt={`Portrait of ${profile.name}`}
+            width="800"
+            height="1000"
+            loading="eager"
+            decoding="async"
+          />
           <aside class="focus-card" aria-label="Research focus">
             <p>Current focus</p>
             <strong>Trustworthy access to legal information</strong>
