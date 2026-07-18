@@ -18,6 +18,7 @@ export type Publication = {
   authors: string;
   venue: string;
   links: SiteLink[];
+  bibtex?: string;
 };
 
 export const profile = {
