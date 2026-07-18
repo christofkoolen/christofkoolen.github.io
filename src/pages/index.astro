@@ -126,11 +126,13 @@ const formatAuthors = (authors: string) => authors
                     </div>
                     {publication.bibtex && (
                       <div class="citation-content" id={`bibtex-${index}`} hidden>
-                        <pre><code>{publication.bibtex}</code></pre>
+                        <pre class="citation-body citation-code"><code>{publication.bibtex}</code></pre>
                       </div>
                     )}
                     {publication.oscola && (
-                      <div class="citation-content oscola-citation" id={`oscola-${index}`} hidden set:html={publication.oscola} />
+                      <div class="citation-content" id={`oscola-${index}`} hidden>
+                        <div class="citation-body citation-prose" set:html={publication.oscola} />
+                      </div>
                     )}
                   </div>
                 )}
