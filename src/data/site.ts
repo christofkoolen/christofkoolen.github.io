@@ -52,8 +52,11 @@ export const research = [
 ];
 
 /*
-Copy the resource fields below into any publication and replace the mock values.
-These values are not rendered because this object is only a template.
+For every publication:
+- Add link objects inside links for PDF, DOI, Publisher, Dataset, or Code.
+- Paste BibTeX between the backticks in bibtex.
+- Paste an OSCOLA citation in oscola. Use <em>...</em> for italics.
+Empty fields are intentionally not shown on the website.
 */
 export const publicationResourceTemplate = {
   links: [
@@ -78,7 +81,9 @@ export const publications: Publication[] = [
     title: 'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
     authors: 'Christof Koolen',
     venue: 'Oxford University Press',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2025',
@@ -86,7 +91,9 @@ export const publications: Publication[] = [
     title: 'De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?',
     authors: 'Christof Koolen and M. Schellemans',
     venue: 'Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht, 46(2)',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2025',
@@ -109,7 +116,9 @@ export const publications: Publication[] = [
     title: 'Generative AI, education, and copyright law: An empirical study of policymaking in UK universities',
     authors: 'G. N. La Diega and Christof Koolen',
     venue: 'European Intellectual Property Review, 46(6), 346–360',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2024',
@@ -117,7 +126,9 @@ export const publications: Publication[] = [
     title: 'From insight to compliance: Appropriate technical and organisational security measures through the lens of cybersecurity maturity models',
     authors: 'Christof Koolen, K. Wuyts, W. Joosen, and P. Valcke',
     venue: 'Computer Law & Security Review, 52, 105914',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2023',
@@ -125,7 +136,9 @@ export const publications: Publication[] = [
     title: 'Innovation and Consumer Protection in Internet of Things Ecosystems: Protecting End Users at the Crossroads between Consumer, Competition, and Data',
     authors: 'Christof Koolen, E. Terryn, and P. Valcke',
     venue: 'KU Leuven',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2023',
@@ -133,7 +146,9 @@ export const publications: Publication[] = [
     title: 'Consumer protection in the age of artificial intelligence: Breaking down the silo mentality between consumer, competition, and data',
     authors: 'Christof Koolen',
     venue: 'European Review of Private Law, 31(2/3)',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2023',
@@ -141,7 +156,9 @@ export const publications: Publication[] = [
     title: 'AI and Antitrust: Between Collision and Collusion',
     authors: 'Christof Koolen and B. V. den Bosch',
     venue: 'Artificial Intelligence and the Law, 13, 577–621',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2022',
@@ -149,7 +166,9 @@ export const publications: Publication[] = [
     title: "'Apes Gone', but what about Consumer Protection? Applying EU Consumer Law to the Transfer of NFTs",
     authors: 'Christof Koolen',
     venue: 'SSRN 4065776',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2022',
@@ -157,7 +176,9 @@ export const publications: Publication[] = [
     title: 'The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google',
     authors: 'Christof Koolen',
     venue: 'IIC - International Review of Intellectual Property and Competition Law, 53',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2021',
@@ -165,7 +186,9 @@ export const publications: Publication[] = [
     title: 'Cybersecurity voor het Internet of Things: Hoe beoordeel je de juridische gevolgen van slimme apparaten met beveiligingsproblemen?',
     authors: 'Christof Koolen',
     venue: '',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2021',
@@ -173,7 +196,9 @@ export const publications: Publication[] = [
     title: 'The traceability of construction and demolition waste in Flanders via blockchain technology: A match made in heaven?',
     authors: 'J. Voorter and Christof Koolen',
     venue: 'Journal for European Environmental & Planning Law, 18(4), 347–369',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2021',
@@ -181,7 +206,9 @@ export const publications: Publication[] = [
     title: 'Des appareils intelligents au centre de plusieurs problèmes de concurrence: Le rapport de l’enquête sectorielle de la Commission européenne sur l’Internet des Objets destiné aux consommateurs',
     authors: 'Christof Koolen',
     venue: 'Consumentenrecht / Droit de la Consommation, 73–78',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2021',
@@ -189,7 +216,9 @@ export const publications: Publication[] = [
     title: 'Connected cars and FRAND licensing traffic jams: The CJEU referral in C-182/21 Nokia v Daimler',
     authors: 'Christof Koolen',
     venue: '',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2021',
@@ -197,7 +226,9 @@ export const publications: Publication[] = [
     title: 'Transparency and Consent in Data-Driven Smart Environments',
     authors: 'Christof Koolen',
     venue: 'European Data Protection Law Review, 7(2), 174–189',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2020',
@@ -205,7 +236,9 @@ export const publications: Publication[] = [
     title: 'Blockchaintechnologie, smart contracts en consumentenbescherming',
     authors: 'Christof Koolen',
     venue: 'Smart contracts: een overzicht vanuit juridisch perspectief, 233–295',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2019',
@@ -213,7 +246,9 @@ export const publications: Publication[] = [
     title: 'Vacuum Cleaner Energy Labels and Misleading Commercial Practices: EU Consumers Left in the Dust?',
     authors: 'Christof Koolen',
     venue: 'Journal of European Consumer and Market Law, 8(2), 82–88',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
   {
     year: '2016',
@@ -221,7 +256,9 @@ export const publications: Publication[] = [
     title: 'The use of hyperlinks in an online environment: putting links in chains?',
     authors: 'Christof Koolen',
     venue: 'Journal of Intellectual Property Law & Practice, 11(8), 585–598',
-    links: []
+    links: [],
+    bibtex: '',
+    oscola: ''
   }
 ];
 
