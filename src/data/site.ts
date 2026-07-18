@@ -51,6 +51,26 @@ export const research = [
   }
 ];
 
+/*
+Copy the resource fields below into any publication and replace the mock values.
+These values are not rendered because this object is only a template.
+*/
+export const publicationResourceTemplate = {
+  links: [
+    { label: 'PDF', href: '/publications/your-file-name.pdf' },
+    { label: 'DOI', href: 'https://doi.org/10.xxxx/your-doi' },
+    { label: 'Publisher', href: 'https://publisher.example/article-page' }
+  ],
+  bibtex: `@article{koolen2025example,
+  title = {Replace with the publication title},
+  author = {Koolen, Christof and Example, Coauthor},
+  journal = {Replace with the journal or book title},
+  year = {2025},
+  doi = {10.xxxx/your-doi}
+}`,
+  oscola: `Christof Koolen and Coauthor Example, ‘Replace with the Article Title’ (2025) 1 <em>Journal Title</em> 1`
+} satisfies Pick<Publication, 'links' | 'bibtex' | 'oscola'>;
+
 export const publications: Publication[] = [
   {
     year: '2025',
@@ -58,24 +78,7 @@ export const publications: Publication[] = [
     title: 'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
     authors: 'Christof Koolen',
     venue: 'Oxford University Press',
-    links: [
-      {
-        label: 'PDF',
-        href: '/publications/genesis-ai-act.pdf'
-      },
-      {
-        label: 'DOI',
-        href: 'https://doi.org/10.xxxx/xxxxx'
-      },
-      {
-        label: 'Publisher',
-        href: 'https://publisher.example.com/article-page'
-      },
-      {
-        label: 'BibTeX',
-        href: '/bibtex/genesis-ai-act.bib'
-      }
-    ]
+    links: []
   },
   {
     year: '2025',
@@ -91,22 +94,14 @@ export const publications: Publication[] = [
     title: 'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
     authors: 'Christof Koolen, C. N. Pehlivan, N. Forgó, and P. Valcke',
     venue: 'Wolters Kluwer',
-    links: [
-      {
-        label: 'PDF',
-        href: '/publications/genesis-ai-act.pdf'
-      },
-      {
-        label: 'Publisher',
-        href: 'https://example.com'
-      }
-    ],
+    links: [],
     bibtex: `@incollection{koolen2025genesis,
-  title = {Genesis of the Artificial Intelligence Act},
+  title = {Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game},
   author = {Koolen, Christof and Pehlivan, C. N. and Forgó, Nikolaus and Valcke, Peggy},
   year = {2025},
   publisher = {Wolters Kluwer}
-}`
+}`,
+    oscola: `Christof Koolen, C N Pehlivan, Nikolaus Forgó and Peggy Valcke, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in <em>Artificial Intelligence and the Law</em> (Wolters Kluwer 2025)`
   },
   {
     year: '2024',
