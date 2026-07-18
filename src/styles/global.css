@@ -84,13 +84,12 @@ h3 { font-size: 1.15rem; line-height: 1.35; }
 .publication-controls a:hover,
 .publication-controls button:hover,
 .publication-controls button[aria-expanded='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
-.citation-content { max-width: 100%; margin-top: .75rem; }
+.citation-content { width: 100%; max-width: 100%; margin-top: .75rem; }
 .citation-content[hidden] { display: none; }
-.citation-content pre,
-.oscola-citation { max-width: 100%; margin: 0; padding: 1rem; overflow-x: auto; border: 1px solid var(--line); border-radius: .45rem; background: var(--surface); }
-.citation-content pre { white-space: pre; }
-.citation-content code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .84rem; line-height: 1.55; }
-.oscola-citation { max-width: 780px; line-height: 1.65; }
+.citation-body { width: 100%; max-width: 100%; margin: 0; padding: 1rem; overflow-x: auto; border: 1px solid var(--line); border-radius: .45rem; background: var(--surface); }
+.citation-code { white-space: pre; }
+.citation-code code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .84rem; line-height: 1.55; }
+.citation-prose { line-height: 1.65; overflow-wrap: anywhere; }
 .timeline { border-top: 1px solid var(--line); }
 .timeline-item { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
 .timeline-date { color: var(--accent); font-weight: 750; }
@@ -114,8 +113,9 @@ footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2.5r
   .section { padding: 4.5rem 0; }
   .publication, .timeline-item { grid-template-columns: 1fr; gap: .5rem; }
   .publication-meta { flex-direction: row; gap: .75rem; }
-  .citation-content pre { padding: .85rem; overflow-x: visible; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
-  .citation-content code { font-size: .76rem; line-height: 1.5; }
+  .citation-body { padding: .85rem; }
+  .citation-code { overflow-x: visible; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+  .citation-code code { font-size: .76rem; line-height: 1.5; }
   footer { flex-direction: column; }
 }
 
