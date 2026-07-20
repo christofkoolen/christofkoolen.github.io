@@ -99,6 +99,7 @@ export const publications: Publication[] = [
   author = {Koolen, Christof},
 	year = {2025},
   publisher = {Oxford University Press},
+  pagetotal = "482",
   isbn = {978-0-19-897258-7 978-0-19-897256-3},
 	doi = {10.1093/9780198972563.001.0001},
 	abstract = {Abstract
@@ -142,7 +143,7 @@ export const publications: Publication[] = [
     type: 'Book chapter',
     title: 'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
     authors: 'Christof Koolen',
-    venue: 'Wolters Kluwer',
+    venue: 'AI Governance and Liability in Europe: A Primer (Wolters Kluwer)',
     links: [
       {
         label: 'PDF',
@@ -161,8 +162,9 @@ export const publications: Publication[] = [
   booktitle = {{AI} {Governance} and {Liability} in {Europe}: {A} {Primer}},
   publisher = {Wolters Kluwer},
   year = {2025},
+  pages = {81--115}
   }`,
-    oscola: `Christof Koolen, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in <em>Artificial Intelligence and the Law</em> (Wolters Kluwer 2025)`
+    oscola: `Christof Koolen, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in Ceyhun Necati Pehlivan, Nikolaus Forgó and Peggy Valcke (eds), <em>AI Governance and Liability in Europe: A Primer</em> (Wolters Kluwer 2025) 81–115`
   },
   {
     category: 'articles',
