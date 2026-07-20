@@ -400,6 +400,20 @@ export const teaching = [
     role: 'Substitute Lecturer',
     description: 'Add a concise description of the course and your contribution.'
   }
+  {
+    term: '2024-2025',
+    title: 'Recht en Artificiële Intelligentie',
+    institution: 'KU Leuven',
+    role: 'Substitute Lecturer',
+    description: 'Add a concise description of the course and your contribution.'
+  }
+  {
+    term: '2024-2025',
+    title: 'AI and Society: Core Concepts',
+    institution: 'KU Leuven',
+    role: 'Substitute Lecturer',
+    description: 'Add a concise description of the course and your contribution.'
+  }
 
 export const talks: Talk[] = [
   {
