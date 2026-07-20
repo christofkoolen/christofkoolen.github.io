@@ -169,12 +169,30 @@ export const publications: Publication[] = [
     category: 'articles',
     year: '2024',
     type: 'Journal article',
-    title: 'Generative AI, education, and copyright law: An empirical study of policymaking in UK universities',
-    authors: 'G. N. La Diega and Christof Koolen',
-    venue: 'European Intellectual Property Review, 46(6), 346–360',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    title: 'Generative AI, Education, and Copyright Law: An Empirical Study of Policymaking in UK Universities',
+    authors: 'Guido Noto La Diega and Christof Koolen',
+    venue: '46(6) European Intellectual Property Review 346–360',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Noto_La_Diega_and_Koolen_2024_GenAI_and_Copyright.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://search.informit.org/doi/10.3316/informit.T2024082300021591119693876'
+      }
+    ],
+    oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86–103`,
+    bibtex: `@article{notoladiega_2024_genai,
+    author = {Noto La Diega, Guido and Koolen, Christof},
+    title = {Generative AI, Education, and Copyright Law: An Empirical Study of Policymaking in UK Universities},
+    journal = {European Intellectual Property Review},
+    publisher = {Sweet & Maxwell},
+    year = {2024},
+    volume = {46},
+    number = {6},
+    pages = {346--360}
+  }`
   },
   {
     category: 'articles',
