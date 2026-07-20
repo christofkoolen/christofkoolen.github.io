@@ -194,6 +194,34 @@ export const publications: Publication[] = [
     pages = {346--360}
   }`
   },
+    {
+    category: 'articles',
+    year: '2024',
+    type: 'Journal article',
+    title: 'Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht',
+    authors: 'Amber Boes and Christof Koolen',
+    venue: '5 Tijdschrift voor Belgisch Handelsrecht 555-567',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Boes_and_Koolen_2024_Autonome_Autos.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://www.rdc-tbh.be/nl/articles/26/'
+      }
+    ],
+    oscola: `Amber Boes and Christof Koolen, ‘Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht'’ (2024) 5 Tijdschrift voor Belgisch Handelsrecht 555–567`,
+    bibtex: `@article{boes_2024_auto,
+    author = {Boes, Amber and Koolen, Christof},
+    title = {Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht},
+    journal = {Tijdschrift voor Belgisch Handelsrecht},
+    publisher = {Larcier},
+    year = {2024},
+    volume = {5},
+    pages = {555--567}
+  }`
+  },
   {
     category: 'articles',
     year: '2024',
