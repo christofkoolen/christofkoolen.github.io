@@ -146,7 +146,7 @@ export const publications: Publication[] = [
     links: [
       {
         label: 'PDF',
-        href: '/publications/Koolen_2025_genesis.pdf'
+        href: '/publications/Koolen_2025_Genesis.pdf'
       },
       {
         label: 'Publisher',
