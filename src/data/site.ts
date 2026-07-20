@@ -182,7 +182,7 @@ export const publications: Publication[] = [
         href: 'https://search.informit.org/doi/10.3316/informit.T2024082300021591119693876'
       }
     ],
-    oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86–103`,
+    oscola: `Guido Noto La Diega and Christof Koolen, ‘Generative AI, Education, and Copyright Law: An Empirical Study of Policymaking in UK Universities’ (2024) 46(6) European Intellectual Property Review 346–360`,
     bibtex: `@article{notoladiega_2024_genai,
     author = {Noto La Diega, Guido and Koolen, Christof},
     title = {Generative AI, Education, and Copyright Law: An Empirical Study of Policymaking in UK Universities},
