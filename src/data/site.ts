@@ -94,17 +94,16 @@ export const publications: Publication[] = [
       }
     ],
     oscola: `Christof Koolen, <em>Protecting EU Consumers in Internet of Things Ecosystems: The Intersection between Consumer, Competition, and Data </em>, (Oxford University Press 2025) 482`,
-    bibtex: `@book{koolen_protecting_2025,
+    bibtex: `@book{koolen_2025_protecting,
 	title = {Protecting {EU} {Consumers} in {Internet} of {Things} {Ecosystems}: {The} {Intersection} between {Consumer}, {Competition}, and {Data}},
-	isbn = {978-0-19-897258-7 978-0-19-897256-3},
+  author = {Koolen, Christof},
+	year = {2025},
+  publisher = {Oxford University Press},
+  isbn = {978-0-19-897258-7 978-0-19-897256-3},
 	doi = {10.1093/9780198972563.001.0001},
 	abstract = {Abstract
             The number of devices being connected to the internet is growing rapidly. This trend—referred to as the Internet of Things (IoT)—reflects the gradual transformation of everyday objects into smart devices. These smart devices are capable of collecting data from their surroundings and sharing those data over the internet. As a result, the development of the IoT raises extensive legal questions from a consumer protection perspective. First, the functionality of smart devices challenges consumer autonomy and the average consumer’s ability to make well-informed transactional decisions. Second, concerns remain about consumer choice, as switching between products or brands is difficult due to interoperability limitations. Third, consumer privacy is threatened by the data-driven nature of the IoT. Protecting EU Consumers in Internet of Things Ecosystems explores solutions to these challenges by critically analyzing the interplay between EU consumer law, EU competition law, and EU data privacy law, aiming to balance innovation and consumer protection in IoT ecosystems. At a time when society must question how the benefits of IoT can be harnessed for the greater good—rather than posing a threat to consumers, businesses, and governments—this volume offers valuable insights for academics, policymakers, businesses, and anyone interested in understanding the impact of technology on our daily lives.},
 	language = {en},
-	urldate = {2025-10-09},
-	publisher = {Oxford University Press},
-	author = {Koolen, Christof},
-	year = {2025},
 	note = {https://academic.oup.com/book/61253},
   }`
   },
@@ -126,7 +125,7 @@ export const publications: Publication[] = [
       }
     ],
     oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86–103`,
-    bibtex: `@article{koolen2025dsa,
+    bibtex: `@article{koolen_2025_dsa,
     author = {Koolen, Christof and Schellemans, Monica},
     title = {De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?},
     journal = {Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht},
@@ -142,16 +141,28 @@ export const publications: Publication[] = [
     year: '2025',
     type: 'Book chapter',
     title: 'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
-    authors: 'Christof Koolen, C. N. Pehlivan, N. Forgó, and P. Valcke',
+    authors: 'Christof Koolen',
     venue: 'Wolters Kluwer',
-    links: [],
-    bibtex: `@incollection{koolen2025genesis,
-  title = {Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game},
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2025_genesis.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://law-store.wolterskluwer.com/s/product/ai-governance-and-liability-in-europe-a-primer/01tPg000005OKCRIA4'
+      }
+    ],
+    bibtex: `@incollection{koolen_2025_genesis,
+  title = {Genesis of the {Artificial} {Intelligence} {Act}: {When} {AI} {Beats} the {Imitation} {Game}},
+  author = {Koolen, Christof},
+  editor = {Pehlivan, Ceyhun Necati and Forgó, Nikolaus and Valcke, Peggy},
   author = {Koolen, Christof and Pehlivan, C. N. and Forgó, Nikolaus and Valcke, Peggy},
+  booktitle = {{AI} {Governance} and {Liability} in {Europe}: {A} {Primer}},
+  publisher = {Wolters Kluwer},
   year = {2025},
-  publisher = {Wolters Kluwer}
-}`,
-    oscola: `Christof Koolen, C N Pehlivan, Nikolaus Forgó and Peggy Valcke, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in <em>Artificial Intelligence and the Law</em> (Wolters Kluwer 2025)`
+  }`,
+    oscola: `Christof Koolen, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in <em>Artificial Intelligence and the Law</em> (Wolters Kluwer 2025)`
   },
   {
     category: 'articles',
