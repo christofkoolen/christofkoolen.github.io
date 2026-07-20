@@ -211,7 +211,7 @@ export const publications: Publication[] = [
         href: 'https://www.rdc-tbh.be/nl/articles/26/'
       }
     ],
-    oscola: `Amber Boes and Christof Koolen, ‘Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht'’ (2024) 5 Tijdschrift voor Belgisch Handelsrecht 555–567`,
+    oscola: `Amber Boes and Christof Koolen, ‘Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht’ (2024) 5 Tijdschrift voor Belgisch Handelsrecht 555–567`,
     bibtex: `@article{boes_2024_auto,
     author = {Boes, Amber and Koolen, Christof},
     title = {Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht},
@@ -227,11 +227,29 @@ export const publications: Publication[] = [
     year: '2024',
     type: 'Journal article',
     title: 'From insight to compliance: Appropriate technical and organisational security measures through the lens of cybersecurity maturity models',
-    authors: 'Christof Koolen, K. Wuyts, W. Joosen, and P. Valcke',
-    venue: 'Computer Law & Security Review, 52, 105914',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    authors: 'Christof Koolen and Kim Wuyts and Wouter Joosen and Peggy Valcke',
+    venue: '52 Computer Law & Security Review, 1–10',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_et_al_2024_Insight.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://www.sciencedirect.com/science/article/abs/pii/S0267364923001243'
+      }
+    ],
+    oscola: `Christof Koolen et al., ‘From insight to compliance: Appropriate technical and organisational security measures through the lens of cybersecurity maturity models’ (2024) 52 Computer Law & Security Review 1–10`,
+    bibtex: `@article{koolen_2024_insight,
+    author = {Koolen, Christof and Wuyts, Kim and Joosen, Wouter and Valcke, Peggy},
+    title = {From insight to compliance: Appropriate technical and organisational security measures through the lens of cybersecurity maturity models},
+    journal = {Computer Law & Security Review},
+    publisher = {Elsevier},
+    year = {2024},
+    volume = {52},
+    pages = {1--10},
+    doi = {10.1016/j.clsr.2023.105914},
+  }`
   },
   {
     category: 'articles',
