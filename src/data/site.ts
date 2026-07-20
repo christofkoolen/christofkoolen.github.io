@@ -30,7 +30,11 @@ export const profile = {
   title: 'Visiting Professor and FWO Postdoctoral Researcher',
   affiliation: 'The Centre for IT & IP Law, KU Leuven (Belgium)',
   email: 'christof.koolen@kuleuven.be',
-  bio: 'I study how artificial intelligence can improve access to legal information while remaining transparent, reliable, and accountable. My work brings together legal information retrieval, computational legal research, and the responsible evaluation of AI systems in legal settings.',
+  bio: [
+  `I study how artificial intelligence can improve access to legal information while remaining transparent, reliable, and accountable. My work brings together legal information retrieval, computational legal research, and the responsible evaluation of AI systems in legal settings.`,
+
+  `I am always interested in collaborating with researchers from law, computer science, and the social sciences. If you think our interests overlap, please feel free to get in touch.`
+  ]
   links: [
     { label: 'Google Scholar', href: 'https://scholar.google.com/citations?user=yPojlMIAAAAJ' },
     { label: 'ORCID', href: 'https://orcid.org/0000-0002-2210-6821' },
@@ -352,7 +356,7 @@ export const publications: Publication[] = [
   },
 
 
-  
+
   {
     category: 'outreach',
     year: '2022',
