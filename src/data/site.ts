@@ -107,6 +107,7 @@ export const publications: Publication[] = [
 	year = {2025},
 	note = {https://academic.oup.com/book/61253},
   }`
+  },
   {
     category: 'articles',
     year: '2025',
