@@ -276,32 +276,10 @@ export const publications: Publication[] = [
   {
     category: 'articles',
     year: '2022',
-    type: 'Working paper',
-    title: "'Apes Gone', but what about Consumer Protection? Applying EU Consumer Law to the Transfer of NFTs",
-    authors: 'Christof Koolen',
-    venue: 'SSRN 4065776',
-    links: [],
-    bibtex: '',
-    oscola: ''
-  },
-  {
-    category: 'articles',
-    year: '2022',
     type: 'Case note',
     title: 'The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google',
     authors: 'Christof Koolen',
     venue: 'IIC - International Review of Intellectual Property and Competition Law, 53',
-    links: [],
-    bibtex: '',
-    oscola: ''
-  },
-  {
-    category: 'outreach',
-    year: '2021',
-    type: 'Professional commentary',
-    title: 'Cybersecurity voor het Internet of Things: Hoe beoordeel je de juridische gevolgen van slimme apparaten met beveiligingsproblemen?',
-    authors: 'Christof Koolen',
-    venue: '',
     links: [],
     bibtex: '',
     oscola: ''
@@ -324,17 +302,6 @@ export const publications: Publication[] = [
     title: 'Des appareils intelligents au centre de plusieurs problèmes de concurrence: Le rapport de l’enquête sectorielle de la Commission européenne sur l’Internet des Objets destiné aux consommateurs',
     authors: 'Christof Koolen',
     venue: 'Consumentenrecht / Droit de la Consommation, 73–78',
-    links: [],
-    bibtex: '',
-    oscola: ''
-  },
-  {
-    category: 'articles',
-    year: '2021',
-    type: 'Case note',
-    title: 'Connected cars and FRAND licensing traffic jams: The CJEU referral in C-182/21 Nokia v Daimler',
-    authors: 'Christof Koolen',
-    venue: '',
     links: [],
     bibtex: '',
     oscola: ''
@@ -382,7 +349,43 @@ export const publications: Publication[] = [
     links: [],
     bibtex: '',
     oscola: ''
-  }
+  },
+
+
+  
+  {
+    category: 'outreach',
+    year: '2022',
+    type: 'Working paper',
+    title: "'Apes Gone', but what about Consumer Protection? Applying EU Consumer Law to the Transfer of NFTs",
+    authors: 'Christof Koolen',
+    venue: 'SSRN 4065776',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+  {
+    category: 'outreach',
+    year: '2021',
+    type: 'Professional commentary',
+    title: 'Cybersecurity voor het Internet of Things: Hoe beoordeel je de juridische gevolgen van slimme apparaten met beveiligingsproblemen?',
+    authors: 'Christof Koolen',
+    venue: '',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+  {
+    category: 'outreach',
+    year: '2021',
+    type: 'Case note',
+    title: 'Connected cars and FRAND licensing traffic jams: The CJEU referral in C-182/21 Nokia v Daimler',
+    authors: 'Christof Koolen',
+    venue: '',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
 ];
 
 export const teaching = [
