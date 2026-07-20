@@ -87,39 +87,55 @@ export const publications: Publication[] = [
     title: 'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
     authors: 'Christof Koolen',
     venue: 'Oxford University Press',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    links: [
+      {
+        label: 'Publisher',
+        href: 'https://academic.oup.com/book/61253'
+      }
+    ],
+    oscola: `Christof Koolen, <em>Protecting EU Consumers in Internet of Things Ecosystems: The Intersection between Consumer, Competition, and Data </em>, (Oxford University Press 2025) 482`,
+    bibtex: `@book{koolen_protecting_2025,
+	title = {Protecting {EU} {Consumers} in {Internet} of {Things} {Ecosystems}: {The} {Intersection} between {Consumer}, {Competition}, and {Data}},
+	isbn = {978-0-19-897258-7 978-0-19-897256-3},
+	doi = {10.1093/9780198972563.001.0001},
+	abstract = {Abstract
+            The number of devices being connected to the internet is growing rapidly. This trend—referred to as the Internet of Things (IoT)—reflects the gradual transformation of everyday objects into smart devices. These smart devices are capable of collecting data from their surroundings and sharing those data over the internet. As a result, the development of the IoT raises extensive legal questions from a consumer protection perspective. First, the functionality of smart devices challenges consumer autonomy and the average consumer’s ability to make well-informed transactional decisions. Second, concerns remain about consumer choice, as switching between products or brands is difficult due to interoperability limitations. Third, consumer privacy is threatened by the data-driven nature of the IoT. Protecting EU Consumers in Internet of Things Ecosystems explores solutions to these challenges by critically analyzing the interplay between EU consumer law, EU competition law, and EU data privacy law, aiming to balance innovation and consumer protection in IoT ecosystems. At a time when society must question how the benefits of IoT can be harnessed for the greater good—rather than posing a threat to consumers, businesses, and governments—this volume offers valuable insights for academics, policymakers, businesses, and anyone interested in understanding the impact of technology on our daily lives.},
+	language = {en},
+	urldate = {2025-10-09},
+	publisher = {Oxford University Press},
+	author = {Koolen, Christof},
+	year = {2025},
+	note = {https://academic.oup.com/book/61253},
+  }`
+  {
+    category: 'articles',
+    year: '2025',
+    type: 'Journal article',
+    title: 'De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?',
+    authors: 'Christof Koolen and Monica Schellemans',
+    venue: '46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86–103',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_and_Schellemans_2025_DSA.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://www.inview.nl/document/id48f2351fa62e4f648138c688146a9af2/'
+      }
+    ],
+    oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86–103`,
+    bibtex: `@article{koolen2025dsa,
+    author = {Koolen, Christof and Schellemans, Monica},
+    title = {De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?},
+    journal = {Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht},
+    publisher = {Wolters Kluwer},
+    year = {2025},
+    volume = {46},
+    number = {2},
+    pages = {86--103}
+  }`
   },
-{
-  category: 'articles',
-  year: '2025',
-  type: 'Journal article',
-  title: 'De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?',
-  authors: 'Christof Koolen and Monica Schellemans',
-  venue: '46(2) Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht 86–103',
-  links: [
-    {
-      label: 'PDF',
-      href: '/publications/Koolen_and_Schellemans_2025_DSA.pdf'
-    },
-    {
-      label: 'Publisher',
-      href: 'https://www.inview.nl/document/id48f2351fa62e4f648138c688146a9af2/'
-    }
-  ],
-  oscola: `Christof Koolen and Monica Schellemans, ‘De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?’ (2025) 46(2) <em>Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht</em> 86–103`,
-  bibtex: `@article{koolen2025dsa,
-  author = {Koolen, Christof and Schellemans, Monica},
-  title = {De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?},
-  journal = {Computerrecht: Tijdschrift voor Informatica, Telecommunicatie en Recht},
-  publisher = {Wolters Kluwer},
-  year = {2025},
-  volume = {46},
-  number = {2},
-  pages = {86--103}
-}`
-},
   {
     category: 'articles',
     year: '2025',
