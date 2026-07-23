@@ -502,36 +502,114 @@ export const publications: Publication[] = [
     type: 'Journal article',
     title: 'The use of hyperlinks in an online environment: putting links in chains?',
     authors: 'Christof Koolen',
-    venue: 'Journal of Intellectual Property Law & Practice, 11(8), 585–598',
+    venue: '11(8) Journal of Intellectual Property Law & Practice 585–598',
     links: [
       {
-        label: 'Pre-print',
-        href: '/publications/Koolen_2021_Transparency.pdf'
+        label: 'PDF',
+        href: '/publications/Koolen_2016_Hyperlinks.pdf'
       },
       {
         label: 'Publisher',
-        href: 'https://edpl.lexxion.eu/article/EDPL/2021/2/7'
+        href: 'https://academic.oup.com/jiplp/article/11/8/585/2450270'
       }
     ],
-    oscola: `Christof Koolen, ‘Transparency and Consent in Data-Driven Smart Environments’ (2021) 7(2) European Data Protection Law Review 174–189`,
-    bibtex: `@article{koolen_2021_transparency,
+    oscola: `Christof Koolen, ‘The use of hyperlinks in an online environment: putting links in chains?’ (2016) 11(8) Journal of Intellectual Property Law & Practice 585–598`,
+    bibtex: `@article{koolen_2016_hyperlinks,
     author = {Koolen, Christof},
-    title = {Transparency and Consent in Data-Driven Smart Environments},
-    journal = {European Data Protection Law Review},
-    publisher = {Lexxion},
-    year = {2021},
-    volume = {7},
-    number = {2},
-    pages = {174--189},
-    doi = {https://doi.org/10.21552/edpl/2021/2/7},
+    title = {The use of hyperlinks in an online environment: putting links in chains?},
+    journal = {Journal of Intellectual Property Law & Practice},
+    publisher = {Oxford University Press},
+    year = {2016},
+    volume = {11},
+    number = {8},
+    pages = {585--598},
+    doi = {https://doi.org/10.1093/jiplp/jpw074},
   }`
+  },
+
+  
+  // Blogs and other 
+  
+ 
+  
+  {
+    category: 'outreach',
+    year: '2026',
+    type: 'Blog',
+    title: "Slimme technologie, kwetsbare consumenten?",
+    authors: 'Christof Koolen',
+    venue: 'EOS Wetenschap',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+
+    {
+    category: 'outreach',
+    year: '2026',
+    type: 'Podcast',
+    title: "De duistere kant van gebruiksgemak",
+    authors: 'Christof Koolen',
+    venue: 'XXX',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+
+  {
+    category: 'outreach',
+    year: '2024',
+    type: 'Blog',
+    title: "Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht",
+    authors: 'Amber Boes and Christof Koolen',
+    venue: 'SSRN 4065776',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+
+  {
+    category: 'outreach',
+    year: '2024',
+    type: 'Newspaper article',
+    title: "Europa bestormt de torens van big tech, hoe zult u de veranderingen voelen?",
+    authors: 'Christof Koolen (contr.)',
+    venue: 'De Standaard',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+
+
+  {
+    category: 'outreach',
+    year: '2024',
+    type: 'Blog',
+    title: "Copyright, Education, and Generative AI: Getting with the programme?",
+    authors: 'Christof Koolen and Guido Noto La Diega',
+    venue: 'SSRN 4065776',
+    links: [],
+    bibtex: '',
+    oscola: ''
+  },
+
+  {
+    category: 'outreach',
+    year: '2023',
+    type: 'Book review',
+    title: "Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies",
+    authors: 'Christof Koolen',
+    venue: 'SSRN 4065776',
+    links: [],
+    bibtex: '',
+    oscola: ''
   },
 
 
   {
     category: 'outreach',
     year: '2022',
-    type: 'Working paper',
+    type: 'Blog',
     title: "'Apes Gone', but what about Consumer Protection? Applying EU Consumer Law to the Transfer of NFTs",
     authors: 'Christof Koolen',
     venue: 'SSRN 4065776',
@@ -539,10 +617,11 @@ export const publications: Publication[] = [
     bibtex: '',
     oscola: ''
   },
+
   {
     category: 'outreach',
     year: '2021',
-    type: 'Professional commentary',
+    type: 'Blog',
     title: 'Cybersecurity voor het Internet of Things: Hoe beoordeel je de juridische gevolgen van slimme apparaten met beveiligingsproblemen?',
     authors: 'Christof Koolen',
     venue: '',
@@ -553,7 +632,7 @@ export const publications: Publication[] = [
   {
     category: 'outreach',
     year: '2021',
-    type: 'Case note',
+    type: 'Blog',
     title: 'Connected cars and FRAND licensing traffic jams: The CJEU referral in C-182/21 Nokia v Daimler',
     authors: 'Christof Koolen',
     venue: '',
