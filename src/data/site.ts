@@ -306,7 +306,7 @@ export const publications: Publication[] = [
     author = {Koolen, Christof and Van den Bosch, Bruno},
     editor = {De Bruyne, Jan and Vanleenhove, Cedric},
     booktitle = {Artificial Intelligence and the Law},
-    edition = {2}
+    edition = {2},
     publisher = {Larcier},
     year = {2023},
     pages = {577--621}
@@ -315,7 +315,7 @@ export const publications: Publication[] = [
   {
     category: 'articles',
     year: '2022',
-    type: 'Case note',
+    type: 'Journal article',
     title: 'The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google',
     authors: 'Christof Koolen',
     venue: 'IIC - International Review of Intellectual Property and Competition Law, 53',
