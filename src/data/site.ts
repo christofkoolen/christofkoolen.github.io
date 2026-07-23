@@ -503,11 +503,29 @@ export const publications: Publication[] = [
     title: 'The use of hyperlinks in an online environment: putting links in chains?',
     authors: 'Christof Koolen',
     venue: 'Journal of Intellectual Property Law & Practice, 11(8), 585–598',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    links: [
+      {
+        label: 'Pre-print',
+        href: '/publications/Koolen_2021_Transparency.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://edpl.lexxion.eu/article/EDPL/2021/2/7'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Transparency and Consent in Data-Driven Smart Environments’ (2021) 7(2) European Data Protection Law Review 174–189`,
+    bibtex: `@article{koolen_2021_transparency,
+    author = {Koolen, Christof},
+    title = {Transparency and Consent in Data-Driven Smart Environments},
+    journal = {European Data Protection Law Review},
+    publisher = {Lexxion},
+    year = {2021},
+    volume = {7},
+    number = {2},
+    pages = {174--189},
+    doi = {https://doi.org/10.21552/edpl/2021/2/7},
+  }`
   },
-
 
 
   {
