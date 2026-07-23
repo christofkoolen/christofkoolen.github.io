@@ -539,21 +539,27 @@ export const publications: Publication[] = [
     title: "Slimme technologie, kwetsbare consumenten?",
     authors: 'Christof Koolen',
     venue: 'EOS Wetenschap',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    links: [
+      {
+        label: 'URL',
+        href: 'https://www.eoswetenschap.eu/technologie/slimme-technologie-kwetsbare-consumenten'
+      },
+    ],
   },
-
+    
     {
     category: 'outreach',
-    year: '2026',
+    year: '2025',
     type: 'Podcast',
     title: "De duistere kant van gebruiksgemak",
     authors: 'Christof Koolen',
-    venue: 'XXX',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Kennismakers',
+    links: [
+      {
+        label: 'URL',
+        href: 'https://kennismakers.be/podcast/de-duistere-kant-van-gebruiksgemak'
+      },
+    ],
   },
 
   {
@@ -562,10 +568,13 @@ export const publications: Publication[] = [
     type: 'Blog',
     title: "Autonome auto’s: navigeren door het contractuele aansprakelijkheidsrecht",
     authors: 'Amber Boes and Christof Koolen',
-    venue: 'SSRN 4065776',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Blog Privaatrecht',
+    links: [
+      {
+        label: 'URL',
+        href: 'https://www.privaatrecht.com/bijzondereovereenkomsten/autonome-autos-navigeren-door-het-contractuele-aansprakelijkheidsrecht/'
+      },
+    ],
   },
 
   {
@@ -575,9 +584,12 @@ export const publications: Publication[] = [
     title: "Europa bestormt de torens van big tech, hoe zult u de veranderingen voelen?",
     authors: 'Christof Koolen (contr.)',
     venue: 'De Standaard',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    links: [
+      {
+        label: 'URL',
+        href: 'https://www.standaard.be/economie/europa-bestormt-de-torens-van-big-tech-hoe-zult-u-de-veranderingen-voelen/40760193.html'
+      },
+    ],
   },
 
 
@@ -587,10 +599,13 @@ export const publications: Publication[] = [
     type: 'Blog',
     title: "Copyright, Education, and Generative AI: Getting with the programme?",
     authors: 'Christof Koolen and Guido Noto La Diega',
-    venue: 'SSRN 4065776',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Kluwer Copyright Blog',
+    links: [
+      {
+        label: 'URL',
+        href: 'https://legalblogs.wolterskluwer.com/copyright-blog/copyright-education-and-generative-ai-getting-with-the-programme/'
+      },
+    ],
   },
 
   {
@@ -599,12 +614,30 @@ export const publications: Publication[] = [
     type: 'Book review',
     title: "Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies",
     authors: 'Christof Koolen',
-    venue: 'SSRN 4065776',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: '31(1) International Journal of Law and Information Technology 91–93',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2023_IoT.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://academic.oup.com/ijlit/article/31/1/91/7226098'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Book Review: Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies’ (2023) 31(1) International Journal of Law and Information Technology 91–93`,
+    bibtex: `@article{koolen_2023_internetofthings,
+    author = {Koolen, Christof},
+    title = {Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies"},
+    journal = {International Journal of Law and Information Technology},
+    publisher = {Oxford University Press},
+    year = {2023},
+    volume = {31},
+    number = {1},
+    pages = {91--93},
+    doi = {https://doi.org/10.1093/ijlit/eaad011},
+  }`
   },
-
 
   {
     category: 'outreach',
@@ -612,10 +645,13 @@ export const publications: Publication[] = [
     type: 'Blog',
     title: "'Apes Gone', but what about Consumer Protection? Applying EU Consumer Law to the Transfer of NFTs",
     authors: 'Christof Koolen',
-    venue: 'SSRN 4065776',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Consumer Competition Market Blog',
+    links: [
+      {
+        label: 'URL',
+        href: 'https://www.law.kuleuven.be/ccm/blog/posts/apes-gone-but-what-about-consumer-protection'
+      },
+    ],
   },
 
   {
@@ -624,22 +660,31 @@ export const publications: Publication[] = [
     type: 'Blog',
     title: 'Cybersecurity voor het Internet of Things: Hoe beoordeel je de juridische gevolgen van slimme apparaten met beveiligingsproblemen?',
     authors: 'Christof Koolen',
-    venue: '',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Cybersecurity Bites',
+    links: [
+      {
+        label: 'URL',
+        href: 'https://cybersecurity-bites.be/beveiligingsinfrastructuur/juridische-gevolgen-van-ontoereikende-iot-beveiliging/'
+      },
+    ],
   },
+
   {
     category: 'outreach',
     year: '2021',
     type: 'Blog',
     title: 'Connected cars and FRAND licensing traffic jams: The CJEU referral in C-182/21 Nokia v Daimler',
     authors: 'Christof Koolen',
-    venue: '',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Consumer Competition Market Blog',
+    links: [
+      {
+        label: 'URL',
+        href: 'https://www.law.kuleuven.be/ccm/blog/posts/connected-cars-and-frand-licensing-traffic-jams-the-cjeu-referral-in-c-18221-nokia-v-daimler'
+      },
+    ],
   },
+
+
 ];
 
 export const teaching = [
