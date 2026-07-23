@@ -383,22 +383,60 @@ export const publications: Publication[] = [
     type: 'Journal article',
     title: 'Des appareils intelligents au centre de plusieurs problèmes de concurrence: Le rapport de l’enquête sectorielle de la Commission européenne sur l’Internet des Objets destiné aux consommateurs',
     authors: 'Christof Koolen',
-    venue: 'Consumentenrecht / Droit de la Consommation, 73–78',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: '132 Droit de la Consommation/Consumentenrecht 73–78',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2021_appareilsintelligents.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://www.larcier-intersentia.com/fr/droit-de-la-consommation-consumentenrecht.html'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Des appareils intelligents au centre de plusieurs problèmes de concurrence: Le rapport de l’enquête sectorielle de la Commission européenne sur l’Internet des Objets destiné aux consommateurs’ (2021) 132 Droit de la Consommation/Consumentenrecht 73–78`,
+    bibtex: `@article{koolen_2021_appareilsintelligents,
+    author = {Koolen, Christof},
+    title = {Des appareils intelligents au centre de plusieurs problèmes de concurrence: Le rapport de l’enquête sectorielle de la Commission européenne sur l’Internet des Objets destiné aux consommateurs},
+    journal = {Droit de la Consommation/Consumentenrecht,
+    publisher = {Larcier},
+    year = {2021},
+    volume = {132},
+    pages = {73--78},
+  }`
   },
+
   {
     category: 'articles',
     year: '2021',
     type: 'Journal article',
     title: 'Transparency and Consent in Data-Driven Smart Environments',
     authors: 'Christof Koolen',
-    venue: 'European Data Protection Law Review, 7(2), 174–189',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: '7(2) European Data Protection Law Review 174–189',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2021_Transparency.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://edpl.lexxion.eu/article/EDPL/2021/2/7'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Transparency and Consent in Data-Driven Smart Environments’ (2021) 7(2) European Data Protection Law Review 174–189`,
+    bibtex: `@article{koolen_2021_transparency,
+    author = {Koolen, Christof},
+    title = {Transparency and Consent in Data-Driven Smart Environments},
+    journal = {European Data Protection Law Review},
+    publisher = {Lexxion},
+    year = {2021},
+    volume = {7},
+    number = {2},
+    pages = {174--189},
+    doi = {https://doi.org/10.21552/edpl/2021/2/7},
+  }`
   },
+
   {
     category: 'articles',
     year: '2020',
