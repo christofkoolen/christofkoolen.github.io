@@ -157,7 +157,7 @@ export const publications: Publication[] = [
         href: 'https://law-store.wolterskluwer.com/s/product/ai-governance-and-liability-in-europe-a-primer/01tPg000005OKCRIA4'
       }
     ],
-    oscola: `Christof Koolen, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in Ceyhun Necati Pehlivan, Nikolaus Forgó and Peggy Valcke (eds), <em>AI Governance and Liability in Europe: A Primer</em> (Wolters Kluwer 2025) 81–115`
+    oscola: `Christof Koolen, ‘Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game’ in Ceyhun Necati Pehlivan, Nikolaus Forgó and Peggy Valcke (eds), <em>AI Governance and Liability in Europe: A Primer</em> (Wolters Kluwer 2025) 81–115`,
     bibtex: `@incollection{koolen_2025_genesis,
     title = {Genesis of the {Artificial} {Intelligence} {Act}: {When} {AI} {Beats} the {Imitation} {Game}},
     author = {Koolen, Christof},
@@ -300,7 +300,7 @@ export const publications: Publication[] = [
         href: 'https://www.larcier-intersentia.com/en/artificial-intelligence-the-law-2nd-edition-9781839702525.html'
       }
     ],
-    oscola: `Christof Koolen and Bruno Van den Bosch, ‘AI and Antitrust: Between Collision and Collusion’ in Jan De Bruyne and Cedric Vanleenhove (eds), <em>Artificial Intelligence and the Law</em> (2nd edn, Larcier 2023) 577–621`
+    oscola: `Christof Koolen and Bruno Van den Bosch, ‘AI and Antitrust: Between Collision and Collusion’ in Jan De Bruyne and Cedric Vanleenhove (eds), <em>Artificial Intelligence and the Law</em> (2nd edn, Larcier 2023) 577–621`,
     bibtex: `@incollection{koolen_2023_ai_antitrust,
     title = {AI and Antitrust: Between Collision and Collusion},
     author = {Koolen, Christof and Van den Bosch, Bruno},
