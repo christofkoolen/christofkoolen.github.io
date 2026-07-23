@@ -33,7 +33,9 @@ export const about: About = {
       degree: 'Bachelor of Laws (LL.B.) and Master of Laws (LL.M.)',
       institution: 'KU Leuven'
     }
-  ]
+  
+    {
+      year: '2017',
       degree: 'Master of Laws (LL.M.)',
       institution: 'KU Leuven',
     },
