@@ -443,22 +443,59 @@ export const publications: Publication[] = [
     type: 'Book chapter',
     title: 'Blockchaintechnologie, smart contracts en consumentenbescherming',
     authors: 'Christof Koolen',
-    venue: 'Smart contracts: een overzicht vanuit juridisch perspectief, 233–295',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: 'Smart contracts: een overzicht vanuit juridisch perspectief (Intersentia) 233–295',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2020_smart_contracts.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://www.larcier-intersentia.com/nl/smart-contracts-9789400011113.html'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Blockchaintechnologie, smart contracts en consumentenbescherming’ in Pieter-Jan Aerts, Frank Hoogendijk and Niels Vandezande (eds), <em>Smart contracts: een overzicht vanuit juridisch perspectief</em> (Intersentia 2020) 233–295`,
+    bibtex: `@incollection{koolen_2020_smart_contracts,
+    title = {Blockchaintechnologie, smart contracts en consumentenbescherming},
+    author = {Koolen, Christof},
+    editor = {Aerts, Pieter-Jan and Hoogendijk, Frank and Vandezande, Niels},
+    booktitle = {Smart contracts: een overzicht vanuit juridisch perspectief},
+    publisher = {Intersentia},
+    year = {2020},
+    pages = {233--295}
+    }`,
   },
+
   {
     category: 'articles',
     year: '2019',
     type: 'Journal article',
     title: 'Vacuum Cleaner Energy Labels and Misleading Commercial Practices: EU Consumers Left in the Dust?',
     authors: 'Christof Koolen',
-    venue: 'Journal of European Consumer and Market Law, 8(2), 82–88',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: '8(2) Journal of European Consumer and Market Law 82–88',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2019_energy_labels.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://kluwerlawonline.com/journalarticle/Journal+of+European+Consumer+and+Market+Law/8.2/EuCML2019014'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Vacuum Cleaner Energy Labels and Misleading Commercial Practices: EU Consumers Left in the Dust?’ (2019) 8(2) Journal of European Consumer and Market Law 82–88`,
+    bibtex: `@article{koolen_2019_energy_labels,
+    author = {Koolen, Christof},
+    title = {Vacuum Cleaner Energy Labels and Misleading Commercial Practices: EU Consumers Left in the Dust?},
+    journal = {Journal of European Consumer and Market Law},
+    publisher = {Wolters Kluwer},
+    year = {2019},
+    volume = {8},
+    number = {2},
+    pages = {82--88},
+  }`
   },
+
   {
     category: 'articles',
     year: '2016',
