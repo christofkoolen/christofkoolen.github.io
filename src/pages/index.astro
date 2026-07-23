@@ -86,14 +86,16 @@ const publicationGroups = [
       </section>
 
       <section class="section about-section" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">01</p>
-          <h2>About</h2>
-          <p>A concise overview of my academic background and the path that informs my current research.</p>
-        </div>
         <div class="about-layout">
-          <div class="about-copy">
-            {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
+          <div class="about-main">
+            <div class="section-heading about-heading">
+              <p class="eyebrow">01</p>
+              <h2>About</h2>
+              <p>A concise overview of my academic background and the path that informs my current research.</p>
+            </div>
+            <div class="about-copy">
+              {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
           </div>
           <div class="credentials" aria-labelledby="credentials-heading">
             <h3 id="credentials-heading">Academic background</h3>
