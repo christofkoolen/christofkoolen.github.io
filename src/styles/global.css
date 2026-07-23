@@ -111,7 +111,7 @@ h3 { font-size: 1.15rem; line-height: 1.35; }
 .citation-code code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .84rem; line-height: 1.55; }
 .citation-prose { line-height: 1.65; overflow-wrap: anywhere; }
 .timeline { border-top: 1px solid var(--line); }
-.timeline-item { display: grid; grid-template-columns: 190px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--line); }
+.timeline-item { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 2rem; padding: 1.35rem 0 1.45rem; border-bottom: 1px solid var(--line); }
 .timeline-date { color: var(--accent); font-weight: 750; }
 .timeline-item p:last-child { color: var(--muted); }
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2.5rem 0 4rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
