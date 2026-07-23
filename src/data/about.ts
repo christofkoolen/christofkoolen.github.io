@@ -13,18 +13,31 @@ export const about = {
   credentials: [
     {
       year: '2023',
-      degree: 'PhD in Laws',
+      degree: 'Ph.D. in Law',
       institution: 'KU Leuven',
-      detail: 'Dissertation on innovation and consumer protection in Internet of Things ecosystems.'
     },
+    
     {
       year: '2018',
       degree: 'Magister Juris (MJur)',
       institution: 'University of Oxford'
     },
+
     {
       year: '2017',
-      degree: 'Bachelor of Laws (LL.B.) and Master of Laws (LL.M.)',
+      degree: 'Master of Laws (LL.M.)',
+      institution: 'KU Leuven'
+    }
+
+    {
+      year: '2016',
+      degree: 'Erasmus exchange',
+      institution: 'University of Southampton'
+    }
+
+    {
+      year: '2015',
+      degree: 'Bachelor of Laws (LL.B.)',
       institution: 'KU Leuven'
     }
   ] satisfies Credential[]
