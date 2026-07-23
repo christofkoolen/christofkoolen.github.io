@@ -310,7 +310,7 @@ export const publications: Publication[] = [
     editor = {De Bruyne, Jan and Vanleenhove, Cedric},
     booktitle = {Artificial Intelligence and the Law},
     edition = {2},
-    publisher = {Larcier},
+    publisher = {Intersentia},
     year = {2023},
     pages = {577--621}
     }`,
