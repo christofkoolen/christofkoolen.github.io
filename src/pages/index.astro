@@ -271,7 +271,7 @@ const publicationGroups = [
 
       const menuButton = document.querySelector('.menu-toggle');
       const primaryNavigation = document.querySelector('#primary-navigation');
-      const setMenuOpen = (isOpen) => {
+      const setMenuOpen = (isOpen: boolean) => {
         menuButton?.setAttribute('aria-expanded', String(isOpen));
         primaryNavigation?.classList.toggle('is-open', isOpen);
       };
