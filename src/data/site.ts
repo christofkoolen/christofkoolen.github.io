@@ -285,6 +285,37 @@ export const publications: Publication[] = [
     doi = {10.54648/ERPL2023018},
   }`
   },
+
+    {
+    category: 'outreach',
+    year: '2023',
+    type: 'Book review',
+    title: "Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies",
+    authors: 'Christof Koolen',
+    venue: '31(1) International Journal of Law and Information Technology 91–93',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2023_IoT.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://academic.oup.com/ijlit/article/31/1/91/7226098'
+      }
+    ],
+    oscola: `Christof Koolen, ‘Book Review: Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies’ (2023) 31(1) International Journal of Law and Information Technology 91–93`,
+    bibtex: `@article{koolen_2023_internetofthings,
+    author = {Koolen, Christof},
+    title = {Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies"},
+    journal = {International Journal of Law and Information Technology},
+    publisher = {Oxford University Press},
+    year = {2023},
+    volume = {31},
+    number = {1},
+    pages = {91--93},
+    doi = {https://doi.org/10.1093/ijlit/eaad011},
+  }`
+  },
   
   {
     category: 'articles',
@@ -606,37 +637,6 @@ export const publications: Publication[] = [
         href: 'https://legalblogs.wolterskluwer.com/copyright-blog/copyright-education-and-generative-ai-getting-with-the-programme/'
       },
     ],
-  },
-
-  {
-    category: 'outreach',
-    year: '2023',
-    type: 'Book review',
-    title: "Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies",
-    authors: 'Christof Koolen',
-    venue: '31(1) International Journal of Law and Information Technology 91–93',
-    links: [
-      {
-        label: 'PDF',
-        href: '/publications/Koolen_2023_IoT.pdf'
-      },
-      {
-        label: 'Publisher',
-        href: 'https://academic.oup.com/ijlit/article/31/1/91/7226098'
-      }
-    ],
-    oscola: `Christof Koolen, ‘Book Review: Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies’ (2023) 31(1) International Journal of Law and Information Technology 91–93`,
-    bibtex: `@article{koolen_2023_internetofthings,
-    author = {Koolen, Christof},
-    title = {Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies"},
-    journal = {International Journal of Law and Information Technology},
-    publisher = {Oxford University Press},
-    year = {2023},
-    volume = {31},
-    number = {1},
-    pages = {91--93},
-    doi = {https://doi.org/10.1093/ijlit/eaad011},
-  }`
   },
 
   {
