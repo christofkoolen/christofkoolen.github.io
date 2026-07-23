@@ -287,7 +287,7 @@ export const publications: Publication[] = [
   },
 
     {
-    category: 'outreach',
+    category: 'articles',
     year: '2023',
     type: 'Book review',
     title: "Internet of Things and the Law: Legal Strategies for Consumer-Centric Smart Technologies",
