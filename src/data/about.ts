@@ -20,25 +20,25 @@ export const about = {
     {
       year: '2018',
       degree: 'Magister Juris (MJur)',
-      institution: 'University of Oxford'
+      institution: 'University of Oxford',
     },
 
     {
       year: '2017',
       degree: 'Master of Laws (LL.M.)',
-      institution: 'KU Leuven'
+      institution: 'KU Leuven',
     },
 
     {
       year: '2016',
       degree: 'Erasmus exchange',
-      institution: 'University of Southampton'
+      institution: 'University of Southampton',
     },
 
     {
       year: '2015',
       degree: 'Bachelor of Laws (LL.B.)',
-      institution: 'KU Leuven'
+      institution: 'KU Leuven',
     },
   ] satisfies Credential[]
 };
