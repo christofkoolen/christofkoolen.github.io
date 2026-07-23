@@ -47,10 +47,13 @@ const publicationGroups = [
         <span>CK</span>
         <strong>{profile.name}</strong>
       </a>
-      <nav aria-label="Primary navigation">
+      <nav id="primary-navigation" aria-label="Primary navigation">
         {sections.map((section) => <a href={`#${section}`}>{section}</a>)}
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Toggle colour theme">◐</button>
+      <div class="header-actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">◐</button>
+      </div>
     </header>
 
     <main id="main">
@@ -103,7 +106,7 @@ const publicationGroups = [
                 <article class="credential-item">
                   <p class="credential-year">{credential.year}</p>
                   <div>
-                    <h3>{credential.degree}</h3>
+                    <h4>{credential.degree}</h4>
                     <p class="credential-institution">{credential.institution}</p>
                     {credential.detail && <p class="credential-detail">{credential.detail}</p>}
                   </div>
@@ -159,7 +162,7 @@ const publicationGroups = [
                           <span>{publication.type}</span>
                         </div>
                         <div class="publication-content">
-                          <h3>{publication.title}</h3>
+                          <h4>{publication.title}</h4>
                           <p class="authors">{formatAuthors(publication.authors)}</p>
                           <p class="publication-source">{publication.venue || publication.type}</p>
                           {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
@@ -264,6 +267,26 @@ const publicationGroups = [
         const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
         document.documentElement.dataset.theme = next;
         localStorage.setItem('theme', next);
+      });
+
+      const menuButton = document.querySelector('.menu-toggle');
+      const primaryNavigation = document.querySelector('#primary-navigation');
+      const setMenuOpen = (isOpen) => {
+        menuButton?.setAttribute('aria-expanded', String(isOpen));
+        primaryNavigation?.classList.toggle('is-open', isOpen);
+      };
+
+      menuButton?.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        setMenuOpen(!isOpen);
+      });
+
+      primaryNavigation?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setMenuOpen(false);
       });
 
       document.querySelectorAll('.citation-toggle').forEach((toggle) => {
