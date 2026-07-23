@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
+import { about } from '../data/about';
 import { profile, publications, research, talks, teaching } from '../data/site';
 
-const sections = ['research', 'publications', 'teaching', 'talks'];
+const sections = ['about', 'research', 'publications', 'teaching', 'talks'];
 const formatAuthors = (authors: string) => authors
   .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
 
@@ -84,9 +85,37 @@ const publicationGroups = [
         </div>
       </section>
 
-      <section class="section" id="research">
+      <section class="section about-section" id="about">
         <div class="section-heading">
           <p class="eyebrow">01</p>
+          <h2>About</h2>
+          <p>A concise overview of my academic background and the path that informs my current research.</p>
+        </div>
+        <div class="about-layout">
+          <div class="about-copy">
+            {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+          <div class="credentials" aria-labelledby="credentials-heading">
+            <h3 id="credentials-heading">Academic background</h3>
+            <div class="credential-list">
+              {about.credentials.map((credential) => (
+                <article class="credential-item">
+                  <p class="credential-year">{credential.year}</p>
+                  <div>
+                    <h3>{credential.degree}</h3>
+                    <p class="credential-institution">{credential.institution}</p>
+                    {credential.detail && <p class="credential-detail">{credential.detail}</p>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="research">
+        <div class="section-heading">
+          <p class="eyebrow">02</p>
           <h2>Research</h2>
           <p>My work examines how computational methods can support legal inquiry without losing sight of institutional context, accountability, and human judgment.</p>
         </div>
@@ -103,7 +132,7 @@ const publicationGroups = [
       <section class="section" id="publications">
         <div class="section-heading split">
           <div>
-            <p class="eyebrow">02</p>
+            <p class="eyebrow">03</p>
             <h2>Publications</h2>
           </div>
         </div>
@@ -182,7 +211,7 @@ const publicationGroups = [
 
       <section class="section" id="teaching">
         <div class="section-heading">
-          <p class="eyebrow">03</p>
+          <p class="eyebrow">04</p>
           <h2>Teaching</h2>
         </div>
         <div class="timeline">
@@ -201,7 +230,7 @@ const publicationGroups = [
 
       <section class="section" id="talks">
         <div class="section-heading">
-          <p class="eyebrow">04</p>
+          <p class="eyebrow">05</p>
           <h2>Talks</h2>
         </div>
         <div class="timeline">
