@@ -293,7 +293,7 @@ export const publications: Publication[] = [
     links: [
       {
         label: 'PDF',
-        href: '/publications/Koolen_2023_AI_Antitrust.pdf'
+        href: '/publications/Koolen_and_VandenBosch_2023_AI_Antitrust.pdf'
       },
       {
         label: 'Publisher',
