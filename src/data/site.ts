@@ -254,6 +254,7 @@ export const publications: Publication[] = [
     doi = {10.1016/j.clsr.2023.105914},
   }`
   },
+  
   {
     category: 'articles',
     year: '2023',
@@ -283,7 +284,9 @@ export const publications: Publication[] = [
     pages = {427--468},
     doi = {10.54648/ERPL2023018},
   }`
-  },  {
+  },
+  
+  {
     category: 'articles',
     year: '2023',
     type: 'Book chapter',
@@ -301,7 +304,7 @@ export const publications: Publication[] = [
       }
     ],
     oscola: `Christof Koolen and Bruno Van den Bosch, ‘AI and Antitrust: Between Collision and Collusion’ in Jan De Bruyne and Cedric Vanleenhove (eds), <em>Artificial Intelligence and the Law</em> (2nd edn, Larcier 2023) 577–621`,
-    bibtex: `@incollection{koolen_2023_ai_antitrust,
+    bibtex: `@incollection{koolen_vandenbosch_2023_ai_antitrust,
     title = {AI and Antitrust: Between Collision and Collusion},
     author = {Koolen, Christof and Van den Bosch, Bruno},
     editor = {De Bruyne, Jan and Vanleenhove, Cedric},
@@ -312,28 +315,68 @@ export const publications: Publication[] = [
     pages = {577--621}
     }`,
   },
+  
   {
     category: 'articles',
     year: '2022',
     type: 'Journal article',
     title: 'The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google',
     authors: 'Christof Koolen',
-    venue: 'IIC - International Review of Intellectual Property and Competition Law, 53',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    venue: '53 IIC - International Review of Intellectual Property and Competition Law 758–777',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Koolen_2022_Interoperability.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://link.springer.com/article/10.1007/s40319-022-01190-x'
+      }
+    ],
+    oscola: `Christof Koolen, ‘The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google’ (2023) 31(2/3) European Review of Private Law 427–468`,
+    bibtex: `@article{koolen_2022_interoperability,
+    author = {Koolen, Christof},
+    title = {The Refusal to Allow Interoperability Between Android Auto and Third-Party Apps: A Deep Dive into Enel X Italia v. Google},
+    journal = {IIC - International Review of Intellectual Property and Competition Law},
+    publisher = {Springer},
+    year = {2022},
+    volume = {53},
+    pages = {758--777},
+    doi = {https://doi.org/10.1007/s40319-022-01190-x},
+  }`
   },
+
   {
     category: 'articles',
     year: '2021',
     type: 'Journal article',
-    title: 'The traceability of construction and demolition waste in Flanders via blockchain technology: A match made in heaven?',
-    authors: 'J. Voorter and Christof Koolen',
-    venue: 'Journal for European Environmental & Planning Law, 18(4), 347–369',
-    links: [],
-    bibtex: '',
-    oscola: ''
+    title: 'The Traceability of Construction and Demolition Waste in Flanders via Blockchain Technology: A Match Made in Heaven?',
+    authors: 'Jonas Voorter and Christof Koolen',
+    venue: '18(4) Journal for European Environmental & Planning Law 347–369',
+    links: [
+      {
+        label: 'PDF',
+        href: '/publications/Voorter_and_Koolen_2021_Traceability.pdf'
+      },
+      {
+        label: 'Publisher',
+        href: 'https://brill.com/view/journals/jeep/18/4/article-p347_347.xml'
+      }
+    ],
+    oscola: `Jonas Voorter and Christof Koolen, ‘The Traceability of Construction and Demolition Waste in Flanders via Blockchain Technology: A Match Made in Heaven?’ (2021) 18(4) Journal for European Environmental & Planning Law 347–369`,
+    bibtex: `@article{voorter_koolen_2021_traceability,
+    author = {Voorter, Jonas and Koolen, Christof},
+    title = {The Traceability of Construction and Demolition Waste in Flanders via Blockchain Technology: A Match Made in Heaven?},
+    journal = {Journal for European Environmental & Planning Law},
+    publisher = {Brill},
+    year = {2021},
+    volume = {18},
+    number = {4},
+    pages = {347--369},
+    doi = {https://doi.org/10.1163/18760104-18040003},
+  }`
   },
+
   {
     category: 'articles',
     year: '2021',
