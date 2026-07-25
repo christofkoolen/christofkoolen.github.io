@@ -719,10 +719,10 @@ export const teaching = [
 ];
 export const talks: Talk[] = [
   {
-    date: 'Add date',
-    title: 'Add talk title',
-    event: 'Add conference, workshop, or institution',
-    location: 'Add location',
+    date: '25 March 2026',
+    title: 'From rule-based systems to large language models: artificial intelligence in an EU legal context',
+    event: 'Publications Office of the EU',
+    location: 'Luxembourg City, Luxembourg',
     links: []
   }
 ];
