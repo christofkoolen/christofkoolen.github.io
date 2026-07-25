@@ -45,16 +45,16 @@ export const profile = {
 
 export const research = [
   {
-    title: 'Legal information retrieval',
-    description: 'Developing and evaluating retrieval systems that help researchers and practitioners find relevant legislation, case law, and other legal materials.'
+    title: 'Computational legal research',
+    description: 'Applies text analysis to legislation, legal doctrine, and case law to retrieve information and uncover patterns that would be difficult to identify through a close reading alone.'
+  },
+  {
+    title: 'Legal informatics',
+    description: 'Looks at how legal information is organized in digital systems and how those systems can make legal sources easier to find and use for lawyers, researchers, and the public.'
   },
   {
     title: 'Artificial intelligence and law',
-    description: 'Studying the capabilities, limitations, and governance of machine-learning and language-model systems used in legal contexts.'
-  },
-  {
-    title: 'Computational legal research',
-    description: 'Using computational methods to investigate legal texts, institutions, and decision-making at scale.'
+    description: 'Studies how machine learning systems and language models perform in legal work, with particular attention paid to their limits and the guardrails needed when they are used.'
   }
 ];
 
