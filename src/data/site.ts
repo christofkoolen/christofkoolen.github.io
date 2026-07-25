@@ -724,5 +724,70 @@ export const talks: Talk[] = [
     event: 'Publications Office of the EU',
     location: 'Luxembourg City, Luxembourg',
     links: []
-  }
+  },
+
+  {
+    date: '17 October 2025',
+    title: 'Making complex legal texts accessible to humans and machines',
+    event: '21st European Forum of Official Gazettes',
+    location: 'Brussels, Belgium',
+    links: []
+  },
+
+  {
+    date: '31 January 2025',
+    title: 'An Introduction to AI for Legal Scholars',
+    event: 'Research Day on Law and Artificial Intelligence, UHasselt',
+    location: 'Hasselt, Belgium',
+    links: []
+  },
+
+    {
+    date: '21-22 October 2024',
+    title: 'Consumers and Automated Contracting',
+    event: 'Conference on Artificial Intelligence in Contracting, Universität Wien',
+    location: 'Vienna, Austria',
+    links: []
+  },
+
+  {
+    date: '22-23 June 2023',
+    title: 'Interoperability in IoT ecosystems',
+    event: 'Competition & IP in the Digital Markets: A comparative & inter-disciplinary perspective, Maastricht University',
+    location: 'Maastricht, the Netherlands',
+    links: []
+  },
+
+  {
+    date: '22 April 2022',
+    title: 'Cloudy with a chance of GDPR: Data protection in Software-as-a-Service and other cloud-based business models',
+    event: 'Conference on Servitization and the Circular Economy, KU Leuven',
+    location: 'Leuven, Belgium',
+    links: []
+  },
+
+  {
+    date: '8 October 2021',
+    title: 'Standard Essential Patents and Access to Technology for Start-ups: From Patent Hold-up to Technology Diffusion',
+    event: 'Are We Owned? A Multidisciplinary and Comparative Conversation on Intellectual Property in the Algorithmic Society, University of Stirling',
+    location: 'Stirling, United Kingdom',
+    links: []
+  },
+
+
+  {
+    date: '8-10 September 2021',
+    title: 'A law literature review of the Internet of Things: identifying common themes, debates and gaps via Natural Language Processing',
+    event: 'IP and the Future of Innovation Conference, EPIP Annual Conference 2021',
+    location: 'Madrid, Spain',
+    links: []
+  },
+
+  {
+    date: '24 January 2020',
+    title: 'Transparency and Consent in Data-Driven Smart Environments',
+    event: 'Symposium Consumer and Data Privacy, Maastricht University',
+    location: 'Maastricht, the Netherlands',
+    links: []
+  },
 ];
