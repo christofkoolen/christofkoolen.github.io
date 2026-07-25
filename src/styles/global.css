@@ -120,6 +120,7 @@ h3 { font-size: 1.15rem; line-height: 1.35; }
 .timeline-item { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 2rem; padding: 1.35rem 0 1.45rem; border-bottom: 1px solid var(--line); }
 .timeline-item:last-child { border-bottom: 0; padding-bottom: 0; }
 .timeline-date { color: var(--accent); font-weight: 750; }
+.timeline-item h3 { max-width: 900px; margin-bottom: .35rem; font-family: Georgia, 'Times New Roman', serif; font-weight: 500; font-size: clamp(1.15rem, 1.45vw, 1.35rem); line-height: 1.35; }
 .timeline-item p:last-child { color: var(--muted); }
 .talk-list { border-top: 1px solid var(--line); }
 .talk { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 2rem; padding: 1.35rem 0 1.45rem; border-bottom: 1px solid var(--line); }
