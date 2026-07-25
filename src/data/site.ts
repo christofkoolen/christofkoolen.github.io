@@ -55,7 +55,7 @@ export const research = [
   {
     title: 'Artificial intelligence and law',
     description: 'Studies how machine learning systems and language models perform in legal work, with particular attention paid to their limits and the guardrails needed when they are used.'
-  }
+  },
 ];
 
 /*
