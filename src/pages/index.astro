@@ -245,7 +245,8 @@ const publicationGroups = [
               </div>
               <div class="talk-content">
                 <h3>{talk.title}</h3>
-                <p class="talk-source">{talk.event}{talk.location ? ` · ${talk.location}` : ''}</p>
+                <p class="talk-source">{talk.event}</p>
+                {talk.location && <p class="talk-source">{talk.location}</p>}
                 {talk.links.length > 0 && (
                   <div class="talk-resources" aria-label={`Resources for ${talk.title}`}>
                     <div class="talk-controls">
