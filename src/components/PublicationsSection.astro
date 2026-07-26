@@ -1,5 +1,7 @@
 ---
+import { publicationGroups } from '../config/site';
 import { publications, type Publication } from '../data/site';
+import SectionHeading from './SectionHeading.astro';
 
 interface Props {
   items?: Publication[];
@@ -17,64 +19,49 @@ const {
 
 const formatAuthors = (authors: string) => authors
   .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
-
-const publicationGroups = [
-  {
-    key: 'books',
-    title: 'Books',
-    description: ''
-  },
-  {
-    key: 'articles',
-    title: 'Articles and book chapters',
-    description: ''
-  },
-  {
-    key: 'outreach',
-    title: 'Blogs and outreach',
-    description: ''
-  }
-] as const;
 ---
 
-<section class="section" id="publications">
-  <div class="section-heading split">
-    <div>
-      <p class="eyebrow">{eyebrow}</p>
-      <h2>{heading}</h2>
-    </div>
-  </div>
+<section class="section" id="publications" aria-labelledby="publications-heading">
+  <SectionHeading
+    eyebrow={eyebrow}
+    title={heading}
+    headingId="publications-heading"
+  />
 
   <div class="publication-groups">
     {publicationGroups.map((group) => {
       const groupPublications = items.filter((publication) => publication.category === group.key);
       if (groupPublications.length === 0) return null;
 
+      const groupHeadingId = `publication-group-${group.key}`;
+
       return (
-        <section class="publication-group" aria-labelledby={`publication-group-${group.key}`}>
-          <div class="publication-group-heading">
-            <h3 id={`publication-group-${group.key}`}>{group.title}</h3>
-            <p>{group.description}</p>
-          </div>
+        <section class="publication-group" aria-labelledby={groupHeadingId}>
+          <h3 class="publication-group-heading" id={groupHeadingId}>{group.title}</h3>
+
           <div class="publication-list">
             {groupPublications.map((publication, index) => {
               const publicationId = `${group.key}-${index}`;
+
               return (
                 <article class="publication">
                   <div class="publication-meta">
                     <span>{publication.year}</span>
                     <span>{publication.type}</span>
                   </div>
+
                   <div class="publication-content">
                     <h4>{publication.title}</h4>
                     <p class="authors">{formatAuthors(publication.authors)}</p>
                     <p class="publication-source">{publication.venue || publication.type}</p>
+
                     {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
                       <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
                         <div class="publication-controls">
                           {publication.links.map((link) => (
                             <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
                           ))}
+
                           {publication.bibtex && (
                             <button
                               type="button"
@@ -82,8 +69,11 @@ const publicationGroups = [
                               data-panel={`bibtex-${publicationId}`}
                               aria-expanded="false"
                               aria-controls={`bibtex-${publicationId}`}
-                            >BibTeX</button>
+                            >
+                              BibTeX
+                            </button>
                           )}
+
                           {publication.oscola && (
                             <button
                               type="button"
@@ -91,14 +81,18 @@ const publicationGroups = [
                               data-panel={`oscola-${publicationId}`}
                               aria-expanded="false"
                               aria-controls={`oscola-${publicationId}`}
-                            >OSCOLA</button>
+                            >
+                              OSCOLA
+                            </button>
                           )}
                         </div>
+
                         {publication.bibtex && (
                           <div class="citation-content" id={`bibtex-${publicationId}`} hidden>
                             <pre class="citation-body citation-code"><code>{publication.bibtex}</code></pre>
                           </div>
                         )}
+
                         {publication.oscola && (
                           <div class="citation-content" id={`oscola-${publicationId}`} hidden>
                             <div class="citation-body citation-prose" set:html={publication.oscola} />
@@ -116,9 +110,13 @@ const publicationGroups = [
     })}
 
     {showAllLink && (
-      <div>
-        <a class="button primary" href="/publications/#publications">View all publications</a>
+      <div class="section-action">
+        <a class="button primary" href="/publications/">View all publications</a>
       </div>
     )}
   </div>
 </section>
+
+<script>
+  import '../scripts/citations';
+</script>
