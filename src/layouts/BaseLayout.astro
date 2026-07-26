@@ -1,30 +1,15 @@
 ---
 import '../styles/global.css';
-import { profile } from '../data/site';
-
-type CurrentPage = 'home' | 'publications' | 'teaching' | 'talks';
-
-type NavItem = {
-  label: string;
-  href: string;
-  page?: CurrentPage;
-};
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { pageMetadata, type PageKey } from '../config/site';
 
 interface Props {
-  title: string;
-  description: string;
-  currentPage?: CurrentPage;
+  page?: PageKey;
 }
 
-const { title, description, currentPage = 'home' } = Astro.props;
-
-const navigation: NavItem[] = [
-  { label: 'about', href: '/#about' },
-  { label: 'research', href: '/#research' },
-  { label: 'publications', href: '/publications/#publications', page: 'publications' },
-  { label: 'teaching', href: '/teaching/#teaching', page: 'teaching' },
-  { label: 'talks', href: '/talks/#talks', page: 'talks' }
-];
+const { page = 'home' } = Astro.props;
+const metadata = pageMetadata[page];
 ---
 
 <!doctype html>
@@ -32,10 +17,10 @@ const navigation: NavItem[] = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
+    <meta name="description" content={metadata.description} />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#f5f2eb" />
-    <title>{title}</title>
+    <title>{metadata.title}</title>
     <script is:inline>
       const savedTheme = localStorage.getItem('theme');
       document.documentElement.dataset.theme = savedTheme || 'light';
@@ -43,87 +28,16 @@ const navigation: NavItem[] = [
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="wordmark" href="/" aria-label={`${profile.name}, home`}>
-        <span>CK</span>
-        <strong>{profile.name}</strong>
-      </a>
-      <nav id="primary-navigation" aria-label="Primary navigation">
-        {navigation.map((item) => (
-          <a
-            href={item.href}
-            aria-current={item.page === currentPage ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
-        ))}
-      </nav>
-      <div class="header-actions">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
-        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">◐</button>
-      </div>
-    </header>
+    <SiteHeader currentPage={page} />
 
     <main id="main">
       <slot />
     </main>
 
-    <footer>
-      <p>© {new Date().getFullYear()} {profile.name}</p>
-      <p></p>
-    </footer>
+    <SiteFooter />
 
     <script>
-      const themeButton = document.querySelector('.theme-toggle');
-      themeButton?.addEventListener('click', () => {
-        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-        document.documentElement.dataset.theme = next;
-        localStorage.setItem('theme', next);
-      });
-
-      const menuButton = document.querySelector('.menu-toggle');
-      const primaryNavigation = document.querySelector('#primary-navigation');
-      const setMenuOpen = (isOpen: boolean) => {
-        menuButton?.setAttribute('aria-expanded', String(isOpen));
-        primaryNavigation?.classList.toggle('is-open', isOpen);
-      };
-
-      menuButton?.addEventListener('click', () => {
-        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-        setMenuOpen(!isOpen);
-      });
-
-      primaryNavigation?.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => setMenuOpen(false));
-      });
-
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') setMenuOpen(false);
-      });
-
-      document.querySelectorAll('.citation-toggle').forEach((toggle) => {
-        toggle.addEventListener('click', () => {
-          const panelId = toggle.getAttribute('data-panel');
-          if (!panelId) return;
-
-          const publication = toggle.closest('.publication-resources');
-          const panel = document.getElementById(panelId);
-          if (!publication || !panel) return;
-
-          const shouldOpen = panel.hasAttribute('hidden');
-          publication.querySelectorAll('.citation-content').forEach((content) => {
-            content.setAttribute('hidden', '');
-          });
-          publication.querySelectorAll('.citation-toggle').forEach((button) => {
-            button.setAttribute('aria-expanded', 'false');
-          });
-
-          if (shouldOpen) {
-            panel.removeAttribute('hidden');
-            toggle.setAttribute('aria-expanded', 'true');
-          }
-        });
-      });
+      import '../scripts/site';
     </script>
   </body>
 </html>
