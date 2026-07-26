@@ -31,7 +31,7 @@ export const profile = {
   affiliation: 'The Centre for IT & IP Law, KU Leuven (Belgium)',
   email: 'christof.koolen@kuleuven.be',
   bio: [
-  `I study how artificial intelligence can improve access to legal information while remaining transparent, reliable, and accountable. My work brings together computational legal research, legal information retrieval, and the evaluation of AI systems in a legal setting.`,
+  `I study how artificial intelligence can improve access to legal information in ways that keep AI systems transparent, reliable and accountable. My work brings together computational legal research, legal information retrieval, and the evaluation of AI systems in a legal setting.`,
 
   `I am always keen to collaborate with researchers from law, computer science, and social sciences. If you think our interests overlap, feel free to get in touch!`
   ],
