@@ -1,10 +1,12 @@
 ---
 import { talks } from '../data/site';
-import SectionHeading from './SectionHeading.astro';
 ---
 
 <section class="section" id="talks" aria-labelledby="talks-heading">
-  <SectionHeading eyebrow="05" title="Talks" headingId="talks-heading" />
+  <div class="section-heading">
+    <p class="eyebrow">05</p>
+    <h2 id="talks-heading">Talks</h2>
+  </div>
 
   <div class="talk-list">
     {talks.map((talk) => (
