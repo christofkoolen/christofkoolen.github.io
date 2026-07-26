@@ -1,0 +1,22 @@
+---
+import { teaching } from '../data/site';
+---
+
+<section class="section" id="teaching">
+  <div class="section-heading">
+    <p class="eyebrow">04</p>
+    <h2>Teaching</h2>
+  </div>
+  <div class="timeline">
+    {teaching.map((item) => (
+      <article class="timeline-item">
+        <p class="timeline-date">{item.term}</p>
+        <div>
+          <h3>{item.title}</h3>
+          <p class="item-subtitle">{item.role} · {item.institution}</p>
+          <p>{item.description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
