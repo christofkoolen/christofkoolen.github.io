@@ -695,13 +695,7 @@ export const teaching = [
     role: 'Visiting Professor',
     description: 'In this course, I introduce law students to the technical foundations of modern artificial intelligence. Instead of treating AI as a black box, students develop an understanding of how AI systems are built and trained, from the fundamentals of machine learning and neural networks to large language models and contemporary AI applications such as retrieval-augmented generation (RAG). My goal is to give students the technical knowledge needed to critically engage with the governance and regulation of AI.'
   },
-  {
-    term: '2024-2025',
-    title: 'European Economic Law',
-    institution: 'KU Leuven',
-    role: 'Substitute Lecturer',
-    description: 'Add a concise description of the course and your contribution.'
-  },
+
   {
     term: '2024-2025',
     title: 'Recht en Artificiële Intelligentie',
@@ -709,6 +703,7 @@ export const teaching = [
     role: 'Substitute Lecturer',
     description: 'Add a concise description of the course and your contribution.'
   },
+
   {
     term: '2024-2025',
     title: 'AI and Society: Core Concepts',
@@ -716,6 +711,15 @@ export const teaching = [
     role: 'Substitute Lecturer',
     description: 'Add a concise description of the course and your contribution.'
   },
+
+  {
+    term: '2024-2025',
+    title: 'European Economic Law',
+    institution: 'KU Leuven',
+    role: 'Substitute Lecturer',
+    description: 'European Economic Law takes a closer look at three core domains: EU internal market law, EU competition law, and EU consumer law. I guided students through the main sources of EU law, such as the Treaties, secondary legislation and key CJEU judgments, and explained how EU law regulates the conduct of Member States. Also considered were key competition law topics (e.g., cartels, abuse of dominance, merger control, and enforcement) and consumer law topics (e.g., unfair commercial practices, unfair contract terms, distance contracts, and product conformity rules).'
+  },
+
 ];
 export const talks: Talk[] = [
   {
