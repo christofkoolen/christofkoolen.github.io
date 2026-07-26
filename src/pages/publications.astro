@@ -1,17 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import PublicationsSection from '../components/PublicationsSection.astro';
-import { profile } from '../data/site';
-
-const description = `${profile.name}'s books, journal articles, book chapters, blogs, and public-facing research.`;
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-  title={`Publications | ${profile.name}`}
-  description={description}
-  currentPage="publications"
->
-  <Hero primaryLabel="Back to home" primaryHref="/" />
+<BaseLayout page="publications">
+  <Hero mode="subpage" />
   <PublicationsSection />
 </BaseLayout>
