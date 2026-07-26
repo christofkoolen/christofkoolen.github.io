@@ -1,15 +1,16 @@
 ---
 import { profile } from '../data/site';
 
+type HeroMode = 'home' | 'subpage';
+
 interface Props {
-  primaryLabel?: string;
-  primaryHref?: string;
+  mode?: HeroMode;
 }
 
-const {
-  primaryLabel = 'View publications',
-  primaryHref = '/publications/'
-} = Astro.props;
+const { mode = 'home' } = Astro.props;
+const primaryAction = mode === 'home'
+  ? { label: 'View publications', href: '/publications/' }
+  : { label: 'Back to home', href: '/' };
 ---
 
 <section class="hero" id="top">
@@ -18,13 +19,16 @@ const {
     <h1>{profile.name}</h1>
     <p class="role">{profile.title}</p>
     <p class="affiliation">{profile.affiliation}</p>
+
     <div class="bio-block">
       {profile.bio.map((paragraph) => <p class="bio">{paragraph}</p>)}
     </div>
+
     <div class="hero-actions">
-      <a class="button primary" href={primaryHref}>{primaryLabel}</a>
+      <a class="button primary" href={primaryAction.href}>{primaryAction.label}</a>
       <a class="button secondary" href={`mailto:${profile.email}`}>Contact</a>
     </div>
+
     <ul class="profile-links" aria-label="Academic profiles">
       {profile.links.map((link) => (
         <li><a href={link.href} target="_blank" rel="noreferrer">{link.label}</a></li>
