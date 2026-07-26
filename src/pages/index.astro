@@ -1,10 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import PublicationsSection from '../components/PublicationsSection.astro';
 import { about } from '../data/about';
-import { profile, research } from '../data/site';
+import { profile, publications, research } from '../data/site';
 
 const description = `${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`;
+
+const selectedPublicationTitles = new Set([
+  'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
+  'De Digital Services Act na één jaar: naar een meer betrouwbare onlineomgeving?',
+  'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game'
+]);
+
+const selectedPublications = publications.filter((publication) => selectedPublicationTitles.has(publication.title));
 ---
 
 <BaseLayout
@@ -58,4 +67,10 @@ const description = `${profile.name} researches law, artificial intelligence, le
       ))}
     </div>
   </section>
+
+  <PublicationsSection
+    items={selectedPublications}
+    heading="Selected publications"
+    showAllLink
+  />
 </BaseLayout>
