@@ -1,0 +1,31 @@
+---
+import { about } from '../data/about';
+import SectionHeading from './SectionHeading.astro';
+---
+
+<section class="section about-section" id="about">
+  <div class="about-layout">
+    <div class="about-main">
+      <SectionHeading eyebrow="01" title="About" className="about-heading" />
+      <div class="about-copy">
+        {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+
+    <aside class="credentials" aria-labelledby="credentials-heading">
+      <h3 id="credentials-heading">Academic background</h3>
+      <div class="credential-list">
+        {about.credentials.map((credential) => (
+          <article class="credential-item">
+            <p class="credential-year">{credential.year}</p>
+            <div>
+              <h4>{credential.degree}</h4>
+              <p class="credential-institution">{credential.institution}</p>
+              {credential.detail && <p class="credential-detail">{credential.detail}</p>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </aside>
+  </div>
+</section>
