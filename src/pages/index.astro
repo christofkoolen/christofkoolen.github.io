@@ -1,74 +1,21 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import AboutSection from '../components/AboutSection.astro';
 import Hero from '../components/Hero.astro';
 import PublicationsSection from '../components/PublicationsSection.astro';
-import { about } from '../data/about';
-import { profile, publications, research } from '../data/site';
+import ResearchSection from '../components/ResearchSection.astro';
+import { selectedPublicationTitles } from '../config/site';
+import { publications } from '../data/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const description = `${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`;
-
-const selectedPublicationTitles = new Set([
-  'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
-  'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
-  'Generative AI, Education, and Copyright Law: An Empirical Study of Policymaking in UK Universities',
-  'Consumer Protection in the Age of Artificial Intelligence: Breaking Down the Silo Mentality Between Consumer, Competition, and Data',
-]);
-
-const selectedPublications = publications.filter((publication) => selectedPublicationTitles.has(publication.title));
+const selectedPublications = publications.filter((publication) =>
+  selectedPublicationTitles.has(publication.title)
+);
 ---
 
-<BaseLayout
-  title={`${profile.name} | Law, AI and Computational Legal Research`}
-  description={description}
-  currentPage="home"
->
+<BaseLayout page="home">
   <Hero />
-
-  <section class="section about-section" id="about">
-    <div class="about-layout">
-      <div class="about-main">
-        <div class="section-heading about-heading">
-          <p class="eyebrow">01</p>
-          <h2>About</h2>
-        </div>
-        <div class="about-copy">
-          {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
-        </div>
-      </div>
-      <div class="credentials" aria-labelledby="credentials-heading">
-        <h3 id="credentials-heading">Academic background</h3>
-        <div class="credential-list">
-          {about.credentials.map((credential) => (
-            <article class="credential-item">
-              <p class="credential-year">{credential.year}</p>
-              <div>
-                <h4>{credential.degree}</h4>
-                <p class="credential-institution">{credential.institution}</p>
-                {credential.detail && <p class="credential-detail">{credential.detail}</p>}
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="research">
-    <div class="section-heading">
-      <p class="eyebrow">02</p>
-      <h2>Research</h2>
-      <p>My current research looks at how computational methods can support the field of law without losing sight of the human dimension.</p>
-    </div>
-    <div class="card-grid">
-      {research.map((item) => (
-        <article class="research-card">
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
+  <AboutSection />
+  <ResearchSection />
   <PublicationsSection
     items={selectedPublications}
     heading="Selected publications"
