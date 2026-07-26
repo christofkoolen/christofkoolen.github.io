@@ -83,7 +83,20 @@ export const publicationResourceTemplate = {
   oscola: `Christof Koolen and Coauthor Example, ‘Replace with the Article Title’ (2025) 1 <em>Journal Title</em> 1`
 } satisfies Pick<Publication, 'category' | 'links' | 'bibtex' | 'oscola'>;
 
+
+/*************************
+  PUBLICATIONS
+*************************/
+
+
+
 export const publications: Publication[] = [
+  
+  
+// BOOKS  
+  
+  
+  
   {
     category: 'books',
     year: '2025',
@@ -111,6 +124,12 @@ export const publications: Publication[] = [
     note = {https://academic.oup.com/book/61253},
   }`
   },
+
+
+// ARTICLES AND BOOK CHAPTERS  
+
+
+
   {
     category: 'articles',
     year: '2025',
@@ -559,7 +578,11 @@ export const publications: Publication[] = [
   },
 
   
-  // Blogs and other 
+
+
+  // BLOGS AND OTHER
+
+
   
  
   
@@ -687,6 +710,15 @@ export const publications: Publication[] = [
 
 ];
 
+
+
+
+/*************************
+  TEACHING
+*************************/
+
+
+
 export const teaching = [
   {
     term: '2024-2026',
@@ -721,6 +753,21 @@ export const teaching = [
   },
 
 ];
+
+
+
+
+
+/*************************
+  TALKS
+*************************/
+
+
+
+
+
+
+
 export const talks: Talk[] = [
   {
     date: '25 Mar 2026',
