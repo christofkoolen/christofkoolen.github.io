@@ -9,7 +9,7 @@ interface Props {
 
 const { mode = 'home' } = Astro.props;
 const primaryAction = mode === 'home'
-  ? { label: 'View publications', href: '/publications/' }
+  ? { label: 'View publications', href: '/publications/#publications' }
   : { label: 'Back to home', href: '/' };
 ---
 
