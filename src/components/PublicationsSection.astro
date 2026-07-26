@@ -1,5 +1,19 @@
 ---
-import { publications } from '../data/site';
+import { publications, type Publication } from '../data/site';
+
+interface Props {
+  items?: Publication[];
+  heading?: string;
+  eyebrow?: string;
+  showAllLink?: boolean;
+}
+
+const {
+  items = publications,
+  heading = 'Publications',
+  eyebrow = '03',
+  showAllLink = false
+} = Astro.props;
 
 const formatAuthors = (authors: string) => authors
   .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
@@ -26,14 +40,14 @@ const publicationGroups = [
 <section class="section" id="publications">
   <div class="section-heading split">
     <div>
-      <p class="eyebrow">03</p>
-      <h2>Publications</h2>
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{heading}</h2>
     </div>
   </div>
 
   <div class="publication-groups">
     {publicationGroups.map((group) => {
-      const groupPublications = publications.filter((publication) => publication.category === group.key);
+      const groupPublications = items.filter((publication) => publication.category === group.key);
       if (groupPublications.length === 0) return null;
 
       return (
@@ -100,5 +114,11 @@ const publicationGroups = [
         </section>
       );
     })}
+
+    {showAllLink && (
+      <div>
+        <a class="button secondary" href="/publications/">View all publications</a>
+      </div>
+    )}
   </div>
 </section>
