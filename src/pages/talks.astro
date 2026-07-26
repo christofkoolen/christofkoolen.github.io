@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import TalksSection from '../components/TalksSection.astro';
+import { profile } from '../data/site';
+
+const description = `${profile.name}'s talks, lectures, and conference presentations on law, artificial intelligence, and legal informatics.`;
+---
+
+<BaseLayout
+  title={`Talks | ${profile.name}`}
+  description={description}
+  currentPage="talks"
+>
+  <Hero primaryLabel="Back to home" primaryHref="/" />
+  <TalksSection />
+</BaseLayout>
