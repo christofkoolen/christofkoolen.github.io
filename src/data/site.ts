@@ -701,7 +701,7 @@ export const teaching = [
     title: 'Recht en Artificiële Intelligentie',
     institution: 'KU Leuven',
     role: 'Substitute Lecturer',
-    description: 'Add a concise description of the course and your contribution.'
+    description: 'For “Recht en Artificiële Intelligentie”, I taught how AI affects the law and how legal rules influence the use of AI systems. A major part of the course covered the EU Artificial Intelligence Act (AI Act), especially its risk-based approach, the regulation of general-purpose AI, systemic risk, and open-source AI. We also considered how AI interacts with specific areas of law, such as liability law, data protection law, and copyright law.'
   },
 
   {
