@@ -1,0 +1,44 @@
+---
+import { profile } from '../data/site';
+
+interface Props {
+  primaryLabel?: string;
+  primaryHref?: string;
+}
+
+const {
+  primaryLabel = 'View publications',
+  primaryHref = '/publications/'
+} = Astro.props;
+---
+
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <p class="eyebrow">Computational law · Legal informatics · Law and AI</p>
+    <h1>{profile.name}</h1>
+    <p class="role">{profile.title}</p>
+    <p class="affiliation">{profile.affiliation}</p>
+    <div class="bio-block">
+      {profile.bio.map((paragraph) => <p class="bio">{paragraph}</p>)}
+    </div>
+    <div class="hero-actions">
+      <a class="button primary" href={primaryHref}>{primaryLabel}</a>
+      <a class="button secondary" href={`mailto:${profile.email}`}>Contact</a>
+    </div>
+    <ul class="profile-links" aria-label="Academic profiles">
+      {profile.links.map((link) => (
+        <li><a href={link.href} target="_blank" rel="noreferrer">{link.label}</a></li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="portrait-column">
+    <img
+      class="portrait-image"
+      src="/profile_image.jpg"
+      alt={`Portrait of ${profile.name}`}
+      loading="eager"
+      decoding="async"
+    />
+  </div>
+</section>
