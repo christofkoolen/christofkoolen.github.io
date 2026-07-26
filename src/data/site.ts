@@ -741,7 +741,7 @@ export const teaching = [
     title: 'AI and Society: Core Concepts',
     institution: 'KU Leuven',
     role: 'Substitute Lecturer',
-    description: 'Add a concise description of the course and your contribution.'
+    description: 'AI & Society: Core Concepts is an interdisciplinary course in KU Leuven’s Master of Artificial Intelligence in Business and Industry that consists of three parts: the ethical, legal, and cognitive dimensions of artificial intelligence. As part of the course, I taught the lectures on the regulation of AI in Europe. Important topics covered were the EU AI Act, data protection, liability for AI systems, fundamental rights, AI governance, and, more broadly, policy questions regarding the development and deployment of AI.'
   },
 
   {
