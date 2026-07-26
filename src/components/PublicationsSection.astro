@@ -1,7 +1,5 @@
 ---
-import { publicationGroups } from '../config/site';
 import { publications, type Publication } from '../data/site';
-import SectionHeading from './SectionHeading.astro';
 
 interface Props {
   items?: Publication[];
@@ -19,14 +17,21 @@ const {
 
 const formatAuthors = (authors: string) => authors
   .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
+
+const publicationGroups = [
+  { key: 'books', title: 'Books' },
+  { key: 'articles', title: 'Articles and book chapters' },
+  { key: 'outreach', title: 'Blogs and outreach' }
+] as const;
 ---
 
 <section class="section" id="publications" aria-labelledby="publications-heading">
-  <SectionHeading
-    eyebrow={eyebrow}
-    title={heading}
-    headingId="publications-heading"
-  />
+  <div class="section-heading split">
+    <div>
+      <p class="eyebrow">{eyebrow}</p>
+      <h2 id="publications-heading">{heading}</h2>
+    </div>
+  </div>
 
   <div class="publication-groups">
     {publicationGroups.map((group) => {
@@ -37,7 +42,9 @@ const formatAuthors = (authors: string) => authors
 
       return (
         <section class="publication-group" aria-labelledby={groupHeadingId}>
-          <h3 class="publication-group-heading" id={groupHeadingId}>{group.title}</h3>
+          <div class="publication-group-heading">
+            <h3 id={groupHeadingId}>{group.title}</h3>
+          </div>
 
           <div class="publication-list">
             {groupPublications.map((publication, index) => {
