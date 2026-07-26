@@ -147,11 +147,11 @@ const publicationGroups = [
             if (groupPublications.length === 0) return null;
 
             return (
-              <details class="publication-group" open={group.key !== 'outreach'}>
-                <summary class="publication-group-heading">
+              <section class="publication-group" aria-labelledby={`publication-group-${group.key}`}>
+                <div class="publication-group-heading">
                   <h3 id={`publication-group-${group.key}`}>{group.title}</h3>
-                  <span class="disclosure-icon" aria-hidden="true"></span>
-                </summary>
+                  <p>{group.description}</p>
+                </div>
                 <div class="publication-list">
                   {groupPublications.map((publication, index) => {
                     const publicationId = `${group.key}-${index}`;
@@ -207,7 +207,7 @@ const publicationGroups = [
                     );
                   })}
                 </div>
-              </details>
+              </section>
             );
           })}
         </div>
@@ -232,39 +232,34 @@ const publicationGroups = [
         </div>
       </section>
 
-      <section class="section" id="talks" aria-labelledby="talks-heading">
-        <details class="section-disclosure">
-          <summary class="section-heading disclosure-heading">
-            <div>
-              <p class="eyebrow">05</p>
-              <h2 id="talks-heading">Talks</h2>
-            </div>
-            <span class="disclosure-icon" aria-hidden="true"></span>
-          </summary>
-          <div class="talk-list">
-            {talks.map((talk) => (
-              <article class="talk">
-                <div class="talk-meta">
-                  <span>{talk.date}</span>
-                </div>
-                <div class="talk-content">
-                  <h3>{talk.title}</h3>
-                  <p class="talk-source">{talk.event}</p>
-                  {talk.location && <p class="talk-source">{talk.location}</p>}
-                  {talk.links.length > 0 && (
-                    <div class="talk-resources" aria-label={`Resources for ${talk.title}`}>
-                      <div class="talk-controls">
-                        {talk.links.map((link) => (
-                          <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                        ))}
-                      </div>
+      <section class="section" id="talks">
+        <div class="section-heading">
+          <p class="eyebrow">05</p>
+          <h2>Talks</h2>
+        </div>
+        <div class="talk-list">
+          {talks.map((talk) => (
+            <article class="talk">
+              <div class="talk-meta">
+                <span>{talk.date}</span>
+              </div>
+              <div class="talk-content">
+                <h3>{talk.title}</h3>
+                <p class="talk-source">{talk.event}</p>
+                {talk.location && <p class="talk-source">{talk.location}</p>}
+                {talk.links.length > 0 && (
+                  <div class="talk-resources" aria-label={`Resources for ${talk.title}`}>
+                    <div class="talk-controls">
+                      {talk.links.map((link) => (
+                        <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                      ))}
                     </div>
-                  )}
-                </div>
-              </article>
-            ))}
-          </div>
-        </details>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
 
