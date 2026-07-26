@@ -2,11 +2,12 @@
 import { teaching } from '../data/site';
 ---
 
-<section class="section" id="teaching">
+<section class="section" id="teaching" aria-labelledby="teaching-heading">
   <div class="section-heading">
     <p class="eyebrow">04</p>
-    <h2>Teaching</h2>
+    <h2 id="teaching-heading">Teaching</h2>
   </div>
+
   <div class="timeline">
     {teaching.map((item) => (
       <article class="timeline-item">

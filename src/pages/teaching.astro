@@ -1,17 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import TeachingSection from '../components/TeachingSection.astro';
-import { profile } from '../data/site';
-
-const description = `${profile.name}'s teaching experience in artificial intelligence, technology, and law.`;
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-  title={`Teaching | ${profile.name}`}
-  description={description}
-  currentPage="teaching"
->
-  <Hero primaryLabel="Back to home" primaryHref="/" />
+<BaseLayout page="teaching">
+  <Hero mode="subpage" />
   <TeachingSection />
 </BaseLayout>
