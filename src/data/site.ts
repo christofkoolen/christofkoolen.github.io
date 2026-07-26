@@ -786,6 +786,38 @@ export const talks: Talk[] = [
   },
 
   {
+    date: '19 Sep 2025',
+    title: 'Generatieve AI in de notarispraktijk',
+    event: 'Vlaamse Raad van het Notariaat',
+    location: 'Sint-Martens-Latem, Belgium',
+    links: []
+  },
+
+  {
+    date: '18 Sep 2025',
+    title: 'General-purpose AI (GPAI)',
+    event: 'Seminar AI Act: Responsible innovation with AI',
+    location: 'Leuven, Belgium',
+    links: []
+  },
+
+  {
+    date: '22 May 2025',
+    title: 'Generatieve AI: strategisch en verantwoord gebruik door juristen',
+    event: 'Raad van State (Council of State)',
+    location: 'Brussels, Belgium',
+    links: []
+  },  
+
+  {
+    date: '12 May 2025',
+    title: 'Praktische toepassing van taalmodellen voor juristen',
+    event: 'Bar Association, Ghent',
+    location: 'Ghent, Belgium',
+    links: []
+  },  
+
+  {
     date: '31 Jan 2025',
     title: 'An Introduction to AI for Legal Scholars',
     event: 'Research Day on Law and Artificial Intelligence, UHasselt',
@@ -793,7 +825,15 @@ export const talks: Talk[] = [
     links: []
   },
 
-    {
+  {
+  date: '28-29 Nov 2024',
+  title: 'The Consumer-Competition-Data Triad',
+  event: 'Ius Commune Conference 2024',
+  location: 'Utrecht, the Netherlands',
+  links: []
+  },
+
+  {
     date: '21-22 Oct 2024',
     title: 'Consumers and Automated Contracting',
     event: 'Conference on Artificial Intelligence in Contracting, Universität Wien',
