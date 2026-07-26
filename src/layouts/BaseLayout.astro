@@ -1,14 +1,48 @@
 ---
 import '../styles/global.css';
-import SiteFooter from '../components/SiteFooter.astro';
-import SiteHeader from '../components/SiteHeader.astro';
-import { pageMetadata, type PageKey } from '../config/site';
+import { profile } from '../data/site';
+
+type PageKey = 'home' | 'publications' | 'teaching' | 'talks';
+
+type NavigationItem = {
+  label: string;
+  href: string;
+  page?: PageKey;
+};
 
 interface Props {
   page?: PageKey;
 }
 
 const { page = 'home' } = Astro.props;
+
+const navigation: NavigationItem[] = [
+  { label: 'about', href: '/#about' },
+  { label: 'research', href: '/#research' },
+  { label: 'publications', href: '/publications/', page: 'publications' },
+  { label: 'teaching', href: '/teaching/', page: 'teaching' },
+  { label: 'talks', href: '/talks/', page: 'talks' }
+];
+
+const pageMetadata = {
+  home: {
+    title: `${profile.name} | Law, AI and Computational Legal Research`,
+    description: `${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`
+  },
+  publications: {
+    title: `Publications | ${profile.name}`,
+    description: `${profile.name}'s books, journal articles, book chapters, blogs, and public-facing research.`
+  },
+  teaching: {
+    title: `Teaching | ${profile.name}`,
+    description: `${profile.name}'s teaching experience in artificial intelligence, technology, and law.`
+  },
+  talks: {
+    title: `Talks | ${profile.name}`,
+    description: `${profile.name}'s talks, lectures, and conference presentations on law, artificial intelligence, and legal informatics.`
+  }
+} satisfies Record<PageKey, { title: string; description: string }>;
+
 const metadata = pageMetadata[page];
 ---
 
@@ -28,13 +62,44 @@ const metadata = pageMetadata[page];
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <SiteHeader currentPage={page} />
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label={`${profile.name}, home`}>
+        <span>CK</span>
+        <strong>{profile.name}</strong>
+      </a>
+
+      <nav id="primary-navigation" aria-label="Primary navigation">
+        {navigation.map((item) => (
+          <a
+            href={item.href}
+            aria-current={item.page === page ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          Menu
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">◐</button>
+      </div>
+    </header>
 
     <main id="main">
       <slot />
     </main>
 
-    <SiteFooter />
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} {profile.name}</p>
+    </footer>
 
     <script>
       import '../scripts/site';
