@@ -1,11 +1,31 @@
 ---
-import AboutSection from '../components/AboutSection.astro';
 import Hero from '../components/Hero.astro';
 import PublicationsSection from '../components/PublicationsSection.astro';
-import ResearchSection from '../components/ResearchSection.astro';
-import { selectedPublicationTitles } from '../config/site';
-import { publications } from '../data/site';
+import { publications, research } from '../data/site';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const about = {
+  introduction: [
+    `I work at the KU Leuven’s Centre for IT & IP Law in Belgium as an FWO postdoctoral researcher and I also teach Introduction to AI Technologies as a Visiting Professor in the Advanced Master of Laws program. My current research asks a fairly timely question: what can natural language processing add to the way legal scholars conduct research? As such, I study how computational methods can be used to work with large bodies of legal text, detect patterns, and test questions that are otherwise difficult to answer.`,
+    `A good deal of my work moves back and forth between law and computer science. That means combining legal analysis with data and code (while keeping an eye on what computational methods cannot tell us). I am particularly interested in methods that can contribute to the legal domain in a broad sense.`,
+    `My teaching covers both the technical foundations of artificial intelligence as well as the legal framework that is developing around it. I am also responsible for coordinating IusStart, an alternative master’s thesis track in which students provide legal advice to start-ups under the guidance of a law firm.`,
+    `My past projects range from conventional academic work, including the publication of a monograph with Oxford University Press, to more experimental work, such as creating a pipeline to automatically match master’s thesis topics with the most suitable day-to-day supervisors.`
+  ],
+  credentials: [
+    { year: '2023', degree: 'Ph.D. in Law', institution: 'KU Leuven' },
+    { year: '2018', degree: 'Magister Juris (MJur)', institution: 'University of Oxford' },
+    { year: '2017', degree: 'Master of Laws (LL.M.)', institution: 'KU Leuven' },
+    { year: '2016', degree: 'Erasmus exchange', institution: 'University of Southampton' },
+    { year: '2015', degree: 'Bachelor of Laws (LL.B.)', institution: 'KU Leuven' }
+  ]
+};
+
+const selectedPublicationTitles = new Set([
+  'Protecting EU Consumers in Internet of Things Ecosystems: The Intersection Between Consumer, Competition, and Data',
+  'Genesis of the Artificial Intelligence Act: When AI Beats the Imitation Game',
+  'Generative AI, Education, and Copyright Law: An Empirical Study of Policymaking in UK Universities',
+  'Consumer Protection in the Age of Artificial Intelligence: Breaking Down the Silo Mentality Between Consumer, Competition, and Data'
+]);
 
 const selectedPublications = publications.filter((publication) =>
   selectedPublicationTitles.has(publication.title)
@@ -14,8 +34,54 @@ const selectedPublications = publications.filter((publication) =>
 
 <BaseLayout page="home">
   <Hero />
-  <AboutSection />
-  <ResearchSection />
+
+  <section class="section about-section" id="about">
+    <div class="about-layout">
+      <div class="about-main">
+        <div class="section-heading about-heading">
+          <p class="eyebrow">01</p>
+          <h2>About</h2>
+        </div>
+
+        <div class="about-copy">
+          {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+
+      <aside class="credentials" aria-labelledby="credentials-heading">
+        <h3 id="credentials-heading">Academic background</h3>
+        <div class="credential-list">
+          {about.credentials.map((credential) => (
+            <article class="credential-item">
+              <p class="credential-year">{credential.year}</p>
+              <div>
+                <h4>{credential.degree}</h4>
+                <p class="credential-institution">{credential.institution}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="research">
+    <div class="section-heading">
+      <p class="eyebrow">02</p>
+      <h2>Research</h2>
+      <p>My current research looks at how computational methods can support the field of law without losing sight of the human dimension.</p>
+    </div>
+
+    <div class="card-grid">
+      {research.map((item) => (
+        <article class="research-card">
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
   <PublicationsSection
     items={selectedPublications}
     heading="Selected publications"
