@@ -1,324 +1,61 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
 import { about } from '../data/about';
-import { profile, publications, research, talks, teaching } from '../data/site';
+import { profile, research } from '../data/site';
 
-const sections = ['about', 'research', 'publications', 'teaching', 'talks'];
-const formatAuthors = (authors: string) => authors
-  .replace(/,\s+and\s+|\s+and\s+|,\s+/g, ' · ');
-
-const publicationGroups = [
-  {
-    key: 'books',
-    title: 'Books',
-    description: ''
-  },
-  {
-    key: 'articles',
-    title: 'Articles and book chapters',
-    description: ''
-  },
-  {
-    key: 'outreach',
-    title: 'Blogs and outreach',
-    description: ''
-  }
-] as const;
+const description = `${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={`${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`} />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#f5f2eb" />
-    <title>{profile.name} | Law, AI and Computational Legal Research</title>
-    <script is:inline>
-      const savedTheme = localStorage.getItem('theme');
-      document.documentElement.dataset.theme = savedTheme || 'light';
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label={`${profile.name}, home`}>
-        <span>CK</span>
-        <strong>{profile.name}</strong>
-      </a>
-      <nav id="primary-navigation" aria-label="Primary navigation">
-        {sections.map((section) => <a href={`#${section}`}>{section}</a>)}
-      </nav>
-      <div class="header-actions">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
-        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">◐</button>
+<BaseLayout
+  title={`${profile.name} | Law, AI and Computational Legal Research`}
+  description={description}
+  currentPage="home"
+>
+  <Hero />
+
+  <section class="section about-section" id="about">
+    <div class="about-layout">
+      <div class="about-main">
+        <div class="section-heading about-heading">
+          <p class="eyebrow">01</p>
+          <h2>About</h2>
+        </div>
+        <div class="about-copy">
+          {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
       </div>
-    </header>
-
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">Computational law · Legal informatics · Law and AI</p>
-          <h1>{profile.name}</h1>
-          <p class="role">{profile.title}</p>
-          <p class="affiliation">{profile.affiliation}</p>
-          <div class="bio-block">
-            {profile.bio.map((paragraph) => <p class="bio">{paragraph}</p>)}
-          </div>
-          <div class="hero-actions">
-            <a class="button primary" href="#publications">View publications</a>
-            <a class="button secondary" href={`mailto:${profile.email}`}>Contact</a>
-          </div>
-          <ul class="profile-links" aria-label="Academic profiles">
-            {profile.links.map((link) => (
-              <li><a href={link.href} target="_blank" rel="noreferrer">{link.label}</a></li>
-            ))}
-          </ul>
-        </div>
-
-        <div class="portrait-column">
-          <img
-            class="portrait-image"
-            src="/profile_image.jpg"
-            alt={`Portrait of ${profile.name}`}
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-      </section>
-
-      <section class="section about-section" id="about">
-        <div class="about-layout">
-          <div class="about-main">
-            <div class="section-heading about-heading">
-              <p class="eyebrow">01</p>
-              <h2>About</h2>
-            </div>
-            <div class="about-copy">
-              {about.introduction.map((paragraph) => <p>{paragraph}</p>)}
-            </div>
-          </div>
-          <div class="credentials" aria-labelledby="credentials-heading">
-            <h3 id="credentials-heading">Academic background</h3>
-            <div class="credential-list">
-              {about.credentials.map((credential) => (
-                <article class="credential-item">
-                  <p class="credential-year">{credential.year}</p>
-                  <div>
-                    <h4>{credential.degree}</h4>
-                    <p class="credential-institution">{credential.institution}</p>
-                    {credential.detail && <p class="credential-detail">{credential.detail}</p>}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="research">
-        <div class="section-heading">
-          <p class="eyebrow">02</p>
-          <h2>Research</h2>
-          <p>My current research looks at how computational methods can support the field of law without losing sight of the human dimension.</p>
-        </div>
-        <div class="card-grid">
-          {research.map((item) => (
-            <article class="research-card">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section class="section" id="publications">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">03</p>
-            <h2>Publications</h2>
-          </div>
-        </div>
-
-        <div class="publication-groups">
-          {publicationGroups.map((group) => {
-            const groupPublications = publications.filter((publication) => publication.category === group.key);
-            if (groupPublications.length === 0) return null;
-
-            return (
-              <section class="publication-group" aria-labelledby={`publication-group-${group.key}`}>
-                <div class="publication-group-heading">
-                  <h3 id={`publication-group-${group.key}`}>{group.title}</h3>
-                  <p>{group.description}</p>
-                </div>
-                <div class="publication-list">
-                  {groupPublications.map((publication, index) => {
-                    const publicationId = `${group.key}-${index}`;
-                    return (
-                      <article class="publication">
-                        <div class="publication-meta">
-                          <span>{publication.year}</span>
-                          <span>{publication.type}</span>
-                        </div>
-                        <div class="publication-content">
-                          <h4>{publication.title}</h4>
-                          <p class="authors">{formatAuthors(publication.authors)}</p>
-                          <p class="publication-source">{publication.venue || publication.type}</p>
-                          {(publication.links.length > 0 || publication.bibtex || publication.oscola) && (
-                            <div class="publication-resources" aria-label={`Resources for ${publication.title}`}>
-                              <div class="publication-controls">
-                                {publication.links.map((link) => (
-                                  <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                                ))}
-                                {publication.bibtex && (
-                                  <button
-                                    type="button"
-                                    class="citation-toggle"
-                                    data-panel={`bibtex-${publicationId}`}
-                                    aria-expanded="false"
-                                    aria-controls={`bibtex-${publicationId}`}
-                                  >BibTeX</button>
-                                )}
-                                {publication.oscola && (
-                                  <button
-                                    type="button"
-                                    class="citation-toggle"
-                                    data-panel={`oscola-${publicationId}`}
-                                    aria-expanded="false"
-                                    aria-controls={`oscola-${publicationId}`}
-                                  >OSCOLA</button>
-                                )}
-                              </div>
-                              {publication.bibtex && (
-                                <div class="citation-content" id={`bibtex-${publicationId}`} hidden>
-                                  <pre class="citation-body citation-code"><code>{publication.bibtex}</code></pre>
-                                </div>
-                              )}
-                              {publication.oscola && (
-                                <div class="citation-content" id={`oscola-${publicationId}`} hidden>
-                                  <div class="citation-body citation-prose" set:html={publication.oscola} />
-                                </div>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      </article>
-                    );
-                  })}
-                </div>
-              </section>
-            );
-          })}
-        </div>
-      </section>
-
-      <section class="section" id="teaching">
-        <div class="section-heading">
-          <p class="eyebrow">04</p>
-          <h2>Teaching</h2>
-        </div>
-        <div class="timeline">
-          {teaching.map((item) => (
-            <article class="timeline-item">
-              <p class="timeline-date">{item.term}</p>
+      <div class="credentials" aria-labelledby="credentials-heading">
+        <h3 id="credentials-heading">Academic background</h3>
+        <div class="credential-list">
+          {about.credentials.map((credential) => (
+            <article class="credential-item">
+              <p class="credential-year">{credential.year}</p>
               <div>
-                <h3>{item.title}</h3>
-                <p class="item-subtitle">{item.role} · {item.institution}</p>
-                <p>{item.description}</p>
+                <h4>{credential.degree}</h4>
+                <p class="credential-institution">{credential.institution}</p>
+                {credential.detail && <p class="credential-detail">{credential.detail}</p>}
               </div>
             </article>
           ))}
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="section" id="talks">
-        <div class="section-heading">
-          <p class="eyebrow">05</p>
-          <h2>Talks</h2>
-        </div>
-        <div class="talk-list">
-          {talks.map((talk) => (
-            <article class="talk">
-              <div class="talk-meta">
-                <span>{talk.date}</span>
-              </div>
-              <div class="talk-content">
-                <h3>{talk.title}</h3>
-                <p class="talk-source">{talk.event}</p>
-                {talk.location && <p class="talk-source">{talk.location}</p>}
-                {talk.links.length > 0 && (
-                  <div class="talk-resources" aria-label={`Resources for ${talk.title}`}>
-                    <div class="talk-controls">
-                      {talk.links.map((link) => (
-                        <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>© {new Date().getFullYear()} {profile.name}</p>
-      <p></p>
-    </footer>
-
-    <script>
-      const themeButton = document.querySelector('.theme-toggle');
-      themeButton?.addEventListener('click', () => {
-        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-        document.documentElement.dataset.theme = next;
-        localStorage.setItem('theme', next);
-      });
-
-      const menuButton = document.querySelector('.menu-toggle');
-      const primaryNavigation = document.querySelector('#primary-navigation');
-      const setMenuOpen = (isOpen: boolean) => {
-        menuButton?.setAttribute('aria-expanded', String(isOpen));
-        primaryNavigation?.classList.toggle('is-open', isOpen);
-      };
-
-      menuButton?.addEventListener('click', () => {
-        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-        setMenuOpen(!isOpen);
-      });
-
-      primaryNavigation?.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => setMenuOpen(false));
-      });
-
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') setMenuOpen(false);
-      });
-
-      document.querySelectorAll('.citation-toggle').forEach((toggle) => {
-        toggle.addEventListener('click', () => {
-          const panelId = toggle.getAttribute('data-panel');
-          if (!panelId) return;
-
-          const publication = toggle.closest('.publication-resources');
-          const panel = document.getElementById(panelId);
-          if (!publication || !panel) return;
-
-          const shouldOpen = panel.hasAttribute('hidden');
-          publication.querySelectorAll('.citation-content').forEach((content) => {
-            content.setAttribute('hidden', '');
-          });
-          publication.querySelectorAll('.citation-toggle').forEach((button) => {
-            button.setAttribute('aria-expanded', 'false');
-          });
-
-          if (shouldOpen) {
-            panel.removeAttribute('hidden');
-            toggle.setAttribute('aria-expanded', 'true');
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
+  <section class="section" id="research">
+    <div class="section-heading">
+      <p class="eyebrow">02</p>
+      <h2>Research</h2>
+      <p>My current research looks at how computational methods can support the field of law without losing sight of the human dimension.</p>
+    </div>
+    <div class="card-grid">
+      {research.map((item) => (
+        <article class="research-card">
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
