@@ -693,7 +693,7 @@ export const teaching = [
     title: 'Introduction to AI Technologies',
     institution: 'KU Leuven',
     role: 'Visiting Professor',
-    description: 'This course introduces law students to the technical foundations of modern artificial intelligence. Instead of treating AI as a black box, students develop an understanding of how AI systems are built and trained, from the fundamentals of machine learning and neural networks to large language models and contemporary AI applications such as retrieval-augmented generation (RAG). The course equips students with the technical knowledge needed to critically engage with the governance and regulation of AI.'
+    description: 'In this course, I introduce law students to the technical foundations of modern artificial intelligence. Instead of treating AI as a black box, students develop an understanding of how AI systems are built and trained, from the fundamentals of machine learning and neural networks to large language models and contemporary AI applications such as retrieval-augmented generation (RAG). My goal is to give students the technical knowledge needed to critically engage with the governance and regulation of AI.'
   },
   {
     term: '2024-2025',
