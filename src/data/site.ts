@@ -110,7 +110,7 @@ export const publications: Publication[] = [
         href: 'https://academic.oup.com/book/61253'
       }
     ],
-    oscola: `Christof Koolen, <em>Protecting EU Consumers in Internet of Things Ecosystems: The Intersection between Consumer, Competition, and Data </em>, (Oxford University Press 2025) 482`,
+    oscola: `Christof Koolen, <em>Protecting EU Consumers in Internet of Things Ecosystems: The Intersection between Consumer, Competition, and Data</em>, (Oxford University Press 2025) 482`,
     bibtex: `@book{koolen_2025_protecting,
     title = {Protecting {EU} {Consumers} in {Internet} of {Things} {Ecosystems}: {The} {Intersection} between {Consumer}, {Competition}, and {Data}},
     author = {Koolen, Christof},
