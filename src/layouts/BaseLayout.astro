@@ -27,23 +27,28 @@ const navigation: NavigationItem[] = [
 const pageMetadata = {
   home: {
     title: `${profile.name} | Law, AI and Computational Legal Research`,
-    description: `${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`
+    description: `${profile.name} researches law, artificial intelligence, legal information retrieval, and computational legal studies.`,
+    canonicalPath: '/'
   },
   publications: {
     title: `Publications | ${profile.name}`,
-    description: `${profile.name}'s books, journal articles, book chapters, blogs, and public-facing research.`
+    description: `${profile.name}'s books, journal articles, book chapters, blogs, and public-facing research.`,
+    canonicalPath: '/publications/'
   },
   teaching: {
     title: `Teaching | ${profile.name}`,
-    description: `${profile.name}'s teaching experience in artificial intelligence, technology, and law.`
+    description: `${profile.name}'s teaching experience in artificial intelligence, technology, and law.`,
+    canonicalPath: '/teaching/'
   },
   talks: {
     title: `Talks | ${profile.name}`,
-    description: `${profile.name}'s talks, lectures, and conference presentations on law, artificial intelligence, and legal informatics.`
+    description: `${profile.name}'s talks, lectures, and conference presentations on law, artificial intelligence, and legal informatics.`,
+    canonicalPath: '/talks/'
   }
-} satisfies Record<PageKey, { title: string; description: string }>;
+} satisfies Record<PageKey, { title: string; description: string; canonicalPath: string }>;
 
 const metadata = pageMetadata[page];
+const canonicalUrl = new URL(metadata.canonicalPath, 'https://christofkoolen.com').toString();
 ---
 
 <!doctype html>
@@ -54,6 +59,7 @@ const metadata = pageMetadata[page];
     <meta name="description" content={metadata.description} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#f5f2eb" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{metadata.title}</title>
     <script is:inline>
