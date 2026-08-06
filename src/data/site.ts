@@ -812,7 +812,7 @@ export const talks: Talk[] = [
   {
     date: '12 May 2025',
     title: 'Praktische toepassing van taalmodellen voor juristen',
-    event: 'Bar Association, Ghent',
+    event: 'Bar Association Ghent',
     location: 'Ghent, Belgium',
     links: []
   },  
